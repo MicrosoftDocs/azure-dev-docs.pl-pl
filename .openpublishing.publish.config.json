@@ -4,7 +4,7 @@
       "docset_name": "azure-dotnet",
       "build_source_folder": "dotnet",
       "build_output_subfolder": "azure-dotnet",
-      "locale": "pl-PL",
+      "locale": "pl-pl",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -18,7 +18,7 @@
       "docset_name": "azure-go",
       "build_source_folder": "go",
       "build_output_subfolder": "azure-go",
-      "locale": "pl-PL",
+      "locale": "pl-pl",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -32,7 +32,7 @@
       "docset_name": "azure-java",
       "build_source_folder": "java",
       "build_output_subfolder": "azure-java",
-      "locale": "pl-PL",
+      "locale": "pl-pl",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -46,7 +46,7 @@
       "docset_name": "azure-javascript",
       "build_source_folder": "javascript",
       "build_output_subfolder": "azure-javascript",
-      "locale": "pl-PL",
+      "locale": "pl-pl",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -60,7 +60,7 @@
       "docset_name": "azure-python",
       "build_source_folder": "python",
       "build_output_subfolder": "azure-python",
-      "locale": "pl-PL",
+      "locale": "pl-pl",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -71,13 +71,11 @@
       "template_folder": "_themes"
     }
   ],
-  "notification_subscribers": [
-    "douge@microsoft.com"
-  ],
+  "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
-    "live-sxs",
-    "master-sxs"
+    "live",
+    "master"
   ],
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
@@ -86,7 +84,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pl-PL",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pl-pl",
       "branch": "master",
       "branch_mapping": {}
     },
