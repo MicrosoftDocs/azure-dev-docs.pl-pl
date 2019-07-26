@@ -1,0 +1,70 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Platforma Azure dla deweloperów języka Go w chmurze
+metadata:
+  title: 'Platforma Azure dla deweloperów języka Go: samouczki, dokumentacja interfejsu API'
+  description: 'Rozpocznij tworzenie aplikacji przy użyciu zestawu Azure SDK dla języka Go, korzystając z poniższych zasobów dla deweloperów.'
+  author: sptramer
+  ms.author: sttramer
+  manager: carmonm
+  ms.date: 01/30/2018
+  ms.topic: landing-page
+  featureFlags:
+    - clicktale
+  ms.devlang: golang
+sections:
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - title: Rozpoczęcie pracy
+            html: <p>Instalowanie zestawu Azure SDK dla języka Go</p>
+            href: 'https://docs.microsoft.com/azure/go/azure-sdk-go-install'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+          - title: Przykłady kodu
+            html: <p>Przykłady kodu platformy Azure utworzonego w języku Go</p>
+            image:
+              src: 'https://docs.microsoft.com//media/common/i_code-samples.svg'
+            href: 'https://github.com/azure-samples/azure-sdk-for-go-samples'
+          - title: Zestaw SDK i narzędzia
+            html: <p>Narzędzia dla deweloperów</p>
+            href: 'https://docs.microsoft.com/azure/go/azure-sdk-go-tools'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+          - title: Dokumentacja interfejsu API
+            html: <p>Dokumentacja GoDoc dotycząca zestawu Azure SDK dla języka Go</p>
+            href: 'https://godoc.org/github.com/Azure/azure-sdk-for-go'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+  - title: Zestaw SDK dla języka Go — przewodniki Szybki start
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - title: Wdrażanie maszyny wirtualnej za pomocą szablonu zasobów platformy Azure i języka Go
+            href: 'https://docs.microsoft.com/azure/go/azure-sdk-go-qs-vm'
+            image:
+              src: 'https://docs.microsoft.com/azure/virtual-machines/media/index/virtualmachine.svg'
+          - title: Przenoszenie obiektów do usługi Azure Blob Storage przy użyciu zestawu Azure Storage SDK
+            href: /azure/storage/blobs/storage-quickstart-blobs-go?toc=/azure/go/toc.json&bc=/azure/go/breadcrumb/toc.json
+            image:
+              src: 'https://docs.microsoft.com/azure/media/index/logo_azure-blob-storage.svg'
+          - title: Łączenie się z usługą Azure Database for PostgreSQL za pomocą języka Go
+            href: /azure/postgresql/connect-go?toc=/azure/go/toc.json&bc=/azure/go/breadcrumb/toc.json
+            image:
+              src: 'https://docs.microsoft.com/azure/media/index/PostgreSQL.svg'
+  - title: Przykłady
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/internal/iam">Uwierzytelnianie za pomocą usług platformy Azure</a>'
+          - html: '<a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/compute">Tworzenie nowych maszyn wirtualnych</a>'
+          - html: '<a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerinstance">Wdrażanie kontenera w usłudze Azure Container Instances</a>'
+          - html: '<a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerservice">Tworzenie klastra w usłudze Azure Kubernetes Service</a>'
+          - html: '<a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/storage">Praca z usługami Azure Storage</a>'
