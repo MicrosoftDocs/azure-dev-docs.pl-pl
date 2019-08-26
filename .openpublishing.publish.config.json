@@ -29,6 +29,20 @@
       "template_folder": "_themes"
     },
     {
+      "docset_name": "azure-go-redirect",
+      "build_source_folder": "go-redirects",
+      "build_output_subfolder": "azure-go-redirect",
+      "locale": "pl-pl",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "azure-java",
       "build_source_folder": "java",
       "build_output_subfolder": "azure-java",
@@ -71,7 +85,13 @@
       "template_folder": "_themes"
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": [
+    "brendm@microsoft.com",
+    "karler@microsoft.com",
+    "kraigb@microsoft.com",
+    "Stephen.Tramer@microsoft.com",
+    "barbkess@microsoft.com"
+  ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
     "live",
@@ -99,5 +119,6 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "targets": {}
 }
