@@ -7,11 +7,11 @@ ms.topic: include
 ms.prod: azure
 ms.technology: azure-cli
 ms.openlocfilehash: 839e8aadca1506a98ce4f0890b6b8917e181a994
-ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69642963"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180906"
 ---
 ## <a name="launch-azure-cloud-shell"></a>Uruchamianie usługi Azure Cloud Shell
 
