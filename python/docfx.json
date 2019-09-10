@@ -39,7 +39,14 @@
     "globalMetadata": {
       "breadcrumb_path": "/azure/python/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "disable_contribution_on_translation_quality": ["MT"],
+      "feedback_system": "None",
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "MSDN.python-sdk",
+          "folder_relative_path_in_docset": "docs-ref-conceptual"
+        }
+      }
     },
     "fileMetadata": {},
     "template": [],
