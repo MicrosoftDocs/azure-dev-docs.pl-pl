@@ -39,6 +39,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/azure/go/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "disable_contribution_on_translation_quality": ["MT"],
       "feedback_system": "None",
       "_op_documentIdPathDepotMapping": {
         "./": {
