@@ -40,7 +40,14 @@
     "globalMetadata": {
       "breadcrumb_path": "/azure/java/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "disable_contribution_on_translation_quality": ["MT"],
+      "feedback_system": "None",
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "Azure.AzureJava",
+          "folder_relative_path_in_docset": "docs-ref-conceptual"
+        }
+      }
     },
     "fileMetadata": {},
     "template": [],
