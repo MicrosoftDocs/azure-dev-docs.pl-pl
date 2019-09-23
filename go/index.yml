@@ -1,7 +1,7 @@
 ### YamlMime:Landing
-title: Zestaw Azure SDK dla języka Go
+title: Dokumentacja zestawu Azure SDK dla języka Go
 summary: >
-  Dowiedz się więcej na temat korzystania z zestawu Azure SDK dla języka Go, zawartych w nim funkcji i narzędzi programistycznych ułatwiających korzystanie z platformy Azure.
+  Dowiedz się więcej o korzystaniu z zestawu Azure SDK dla języka Go oraz zawartych w nim funkcji i narzędzi programistycznych ułatwiających używanie platformy Azure z językiem Go.
 metadata:
   title: Platforma Azure dla deweloperów języka Go
   description: Rozpocznij tworzenie aplikacji przy użyciu zestawu Azure SDK dla języka Go, korzystając z poniższych zasobów dla deweloperów.
@@ -11,12 +11,12 @@ metadata:
   ms.topic: landing-page
   ms.collection: collection
   ms.devlang: golang
-  ms.openlocfilehash: 68af188ce8193241127b418df00352481151ce4e
-  ms.sourcegitcommit: e1204a575c95672b6ba369d12bc7d86d4e2acc52
+  ms.openlocfilehash: f6f32557f7ee54e42882bf270e93e5d37019a2db
+  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
   ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70864369"
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71094796"
 landingContent:
 - title: Wprowadzenie do zestawu Azure SDK dla języka Go
   linkLists:
