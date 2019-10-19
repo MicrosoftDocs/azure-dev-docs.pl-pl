@@ -2,6 +2,6 @@
   tocHref: /azure
   topicHref: /azure/index
   items:
-    - name: Zestaw SDK dla języka Go
+    - name: Zestaw Azure SDK dla języka Go
       tocHref: /azure/go
       topicHref: /azure/go/index
