@@ -23,7 +23,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif"
         ],
         "exclude": [
           "**/obj/**",
@@ -50,7 +51,23 @@
         }
       }
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "author": {
+        "*.md": "kraigb"        
+      },
+      "manager": {
+        "*.md": "barbkess"        
+      },
+      "ms.author": {
+        "*.md": "kraigb"        
+      },      
+      "ms.devlang": {
+        "*.md": "python"
+      },      
+      "ms.prod": {
+        "*.md": "azure-python"        
+      }
+    },
     "template": [],
     "dest": "azure-python",
     "markdownEngineName": "markdig"
