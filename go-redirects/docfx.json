@@ -37,7 +37,13 @@
     "globalMetadata": {
       "breadcrumb_path": "/go/azure/breadcrumb/toc.json",
       "extendBreadcrumb": false,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
     "template": [],
     "dest": "azure-go-sdk-conceptual",
