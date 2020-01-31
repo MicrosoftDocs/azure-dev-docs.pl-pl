@@ -1,18 +1,14 @@
 ---
 title: Wdrażanie maszyny wirtualnej platformy Azure z poziomu kodu Go
 description: Wdróż maszynę wirtualną za pomocą zestawu Azure SDK dla języka Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: quickstart
-ms.devlang: go
-ms.openlocfilehash: 01f6e40e80a4c5f29a6179869a2fd95f6cea0623
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b777d638d0adb1b67351a7ccffb545e05309a53e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291959"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872095"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Szybki start: wdrażanie maszyny wirtualnej platformy Azure za pomocą szablonu i zestawu Azure SDK dla języka Go
 

@@ -1,18 +1,14 @@
 ---
 title: Instalowanie zestawu Azure SDK dla języka Go
 description: Jak zainstalować i skonfigurować zestaw Azure SDK dla języka Go oraz zapewnić w nim zasoby.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 03/14/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: e7a4449ed29239e7cb08902cee299d74102a72bf
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: daf725a59042038e682c852a50080972d33a497e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291942"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871890"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Instalowanie zestawu Azure SDK dla języka Go
 

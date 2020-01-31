@@ -1,16 +1,11 @@
 ---
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
-ms.topic: include
-ms.prod: azure
 ms.technology: azure-cli
-ms.openlocfilehash: 5664ee8550d048b7cb1928272c37ff0a64f6bf5d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 198b6ced157a846b749fbe5981f89cde5ada62d5
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291908"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872093"
 ---
 Jeśli nie masz subskrypcji platformy Azure, utwórz [bezpłatne konto](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).

@@ -1,17 +1,12 @@
 ---
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
-ms.topic: include
-ms.prod: azure
 ms.technology: azure-cli
-ms.openlocfilehash: 839e8aadca1506a98ce4f0890b6b8917e181a994
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b356bf7cc63d08e942213d8ee6702eeed3ffd0e1
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291925"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872094"
 ---
 ## <a name="launch-azure-cloud-shell"></a>Uruchamianie usługi Azure Cloud Shell
 
