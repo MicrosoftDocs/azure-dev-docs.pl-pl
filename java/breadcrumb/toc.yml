@@ -1,0 +1,14 @@
+- name: Azure
+  tocHref: /azure
+  topicHref: /azure/index
+  items:
+    - name: Platforma Azure dla deweloperów języka Java
+      tocHref: /azure/java
+      topicHref: /azure/java/index
+      items:
+        - name: Oprogramowanie Spring na platformie Azure
+          tocHref: /azure/java/spring-framework
+          topicHref: /azure/java/spring-framework/index
+        - name: Specyfikacja Eclipse MicroProfile na platformie Azure
+          tocHref: /azure/java/microprofile
+          topicHref: /azure/java/microprofile/index

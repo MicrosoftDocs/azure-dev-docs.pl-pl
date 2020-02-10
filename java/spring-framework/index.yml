@@ -1,0 +1,85 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Oprogramowanie Spring na platformie Azure
+metadata:
+  document_id: null
+  title: Oprogramowanie Spring na platformie Azure
+  description: Zacznij tworzyć aplikacje na platformie Azure przy użyciu oprogramowania Spring.
+  keywords: 'Azure, Java, Maven, Spring, Boot'
+  author: bmitchell287
+  ms.author: brendm
+  manager: douge
+  ms.date: 02/01/2018
+  ms.topic: landing-page
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+  ms.custom: seo-java-july2019
+sections:
+  - items:
+      - type: markdown
+        text: |
+          [Spring](https://spring.io/) to platforma aplikacji typu open source opracowana przez firmę [Pivotal](https://pivotal.io), która zapewnia uproszczone, modularne podejście do tworzenia aplikacji języka Java.  Przewodniki Szybki start i samouczki w tej witrynie internetowej przedstawiają, jak tworzyć i wdrażać aplikacje platformy Spring w chmurze.
+  - title: Przewodniki Wprowadzenie
+    items:
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            text: Programy Spring Boot Starter dla platformy Azure
+            href: spring-boot-starters-for-azure.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/storage.svg'
+            text: Azure Storage
+            href: configure-spring-boot-starter-java-app-with-azure-storage.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg'
+            text: Usługa Azure Active Directory
+            href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/KeyVault.svg'
+            text: Usługa Key Vault
+            href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/EventHubs.svg'
+            text: Platforma Kafka i usługa Event Hubs
+            href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ApplicationInsights.svg'
+            text: Application Insights
+            href: configure-spring-boot-java-applicationinsights.md
+  - title: Samouczki krok po kroku
+    items:
+      - type: markdown
+        text: 'Dowiedz się, jak integrować aplikacje Spring Boot z usługami platformy Azure.'
+      - type: list
+        style: unordered
+        className: spaced noBullet
+        items:
+          - html: <a href="configure-spring-boot-initializer-java-app-with-redis-cache.md">Jak skonfigurować aplikację Spring Initializr do używania usługi Redis Cache</a>
+          - html: <a href="configure-spring-boot-starter-java-app-with-cosmos-db.md">Jak używać programu Spring Boot Starter z interfejsem API języka SQL w usłudze Azure Cosmos DB</a>
+          - html: <a href="deploy-spring-boot-java-app-with-maven-plugin.md">Jak używać wtyczki Maven dla usługi Azure Web Apps do wdrażania aplikacji Spring Boot na platformie Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-on-kubernetes.md">Wdrażanie aplikacji Spring Boot na platformie Kubernetes w usłudze Azure Container Service</a>
+          - html: <a href="deploy-spring-boot-java-app-on-linux.md">Wdrażanie aplikacji internetowej Spring Boot w systemie Linux w usłudze Azure Container Service</a>
+          - html: <a href="deploy-spring-boot-java-app-using-fabric8-maven-plugin.md">Wdrażanie aplikacji Spring Boot przy użyciu wtyczki Maven Fabric8</a>
+          - html: <a href="deploy-containerized-spring-boot-java-app-with-maven-plugin.md">Jak używać wtyczki Maven dla usługi Azure Web Apps do wdrażania konteneryzowanych aplikacji Spring Boot na platformie Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md">Jak używać wtyczki Maven dla usługi Azure Web Apps do wdrażania aplikacji Spring Boot z usługi Azure Container Registry do usługi Azure App Service</a>
+  - title: Samples
+    items:
+      - type: list
+        style: unordered
+        className: spaced noBullet
+        items:
+          - html: '<a href="https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples">Przykłady dotyczące środowiska Spring Boot dla platformy Azure</a>'
+          - html: '<a href="https://github.com/spring-guides/">Przewodniki dotyczące środowiska Spring Boot</a>'
+  - title: Dokumentacja
+    items:
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Platforma Spring
+            html: '<p><a href="https://spring.io/">Platforma Spring</a></p><p><a href="https://spring.io/docs">Informacje o platformie Spring</a></p><p><a href="https://spring.io/docs/reference">Dokumentacja referencyjna</a></p>'
+          - title: Spring Boot
+            html: '<p><a href="https://projects.spring.io/spring-boot/">Spring Boot</a></p><p><a href="https://start.spring.io/">Spring Initializr</a></p>'

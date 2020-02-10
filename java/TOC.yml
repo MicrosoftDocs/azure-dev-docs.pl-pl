@@ -1,0 +1,186 @@
+- name: Platforma Azure dla deweloperów języka Java
+  href: index.yml
+  items:
+    - name: Rozpoczęcie pracy
+      href: java-sdk-azure-get-started.md
+    - name: Przewodniki Szybki start
+      items:
+        - name: Wdrażanie aplikacji internetowych
+          items:
+            - name: System Windows i oprogramowanie Eclipse
+              href: /azure/app-service/app-service-web-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: System Linux i oprogramowanie Tomcat
+              href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: System Linux i środowisko Java SE
+              href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Monitorowanie aplikacji internetowych
+          href: /azure/azure-monitor/learn/java-quick-start?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure Resource Manager
+          href: /azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-intellij?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure DevOps Projects
+          href: /azure/devops-project/azure-devops-project-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Funkcja bezserwerowa
+          href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Bazy danych
+          items:
+            - name: Baza danych SQL
+              href: /azure/sql-database/sql-database-connect-query-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: MySQL
+              href: /azure/mysql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Cosmos DB
+              items:
+                - name: Interfejs API SQL
+                  href: /azure/cosmos-db/create-sql-api-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Interfejs API tabel
+                  href: /azure/cosmos-db/create-table-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Interfejs API programu Graph
+                  href: /azure/cosmos-db/create-graph-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Interfejs API rozwiązania Cassandra
+                  href: /azure/cosmos-db/create-cassandra-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Interfejs API usługi MongoDB
+                  href: /azure/cosmos-db/create-mongodb-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Obiekty blob magazynu
+          href: /azure/storage/blobs/storage-quickstart-blobs-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Pamięć podręczna Redis
+          href: /azure/azure-cache-for-redis/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Service Fabric
+          items:
+            - name: Wdrażanie środowiska Spring Boot
+              href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Wdrażanie niezawodnych usług
+              href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Aplikacje do obsługi komunikatów
+          items:
+            - name: Komunikaty usługi Service Bus
+              items:
+                - name: Korzystanie z kolejek
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-queues?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Korzystanie z tematów i subskrypcji
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-topics-subscriptions?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Technologie JMS i AMQP
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Event Hubs
+              href: /azure/event-hubs/event-hubs-java-get-started-send?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Usługa IoT Hub
+          items:
+            - name: Wysyłanie danych telemetrycznych
+              href: /azure/iot-hub/quickstart-send-telemetry-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Kontrolowanie urządzenia
+              href: /azure/iot-hub/quickstart-control-device-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure Search
+          href: /azure/search/search-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Cognitive Services
+          items:
+            - name: Przetwarzanie obrazów
+              href: /azure/cognitive-services/Computer-vision/Quickstarts/java-analyze?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Analiza tekstu
+              href: /azure/cognitive-services/Text-Analytics/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Wyszukiwanie w sieci Web (Bing)
+              href: /azure/cognitive-services/bing-web-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Wyszukiwanie obrazów w usłudze Bing
+              href: /azure/cognitive-services/bing-image-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - name: Struktury i platformy
+      expanded: true
+      items:
+        - name: Platforma Spring i środowisko Spring Boot
+          href: /azure/java/spring-framework/index
+        - name: Eclipse MicroProfile
+          href: /azure/java/microprofile/index
+    - name: Narzędzia deweloperskie
+      expanded: true
+      items:
+        - name: Omówienie
+          href: java-azure-tools.md
+        - name: Obsługa technologii Java
+          items:
+            - name: Obsługa długoterminowa technologii Java
+              href: jdk/index.md
+            - name: Instalowanie zestawu Java JDK
+              href: jdk/java-jdk-install.md
+            - name: Obrazy platformy Docker ze środowiskiem Java dla platformy Azure
+              href: jdk/java-jdk-docker-images.md
+            - name: Narzędzia Java Flight Recorder i Mission Control
+              href: jdk/java-jdk-flight-recorder-and-mission-control.md
+            - name: Powody do migracji do środowiska Java 11
+              href: jdk/reasons-to-move-to-java-11.md
+        - name: Visual Studio Code
+          href: 'https://code.visualstudio.com/docs/languages/java'
+        - name: IntelliJ IDEA
+          href: intellij/azure-toolkit-for-intellij.md
+        - name: Eclipse
+          href: eclipse/azure-toolkit-for-eclipse.md
+        - name: Wtyczki usługi Maven
+          href: /java/api/overview/azure/maven/README
+          items:
+            - name: Azure App Service Web Apps
+              href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/README
+            - name: Azure Functions
+              href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README
+        - name: Ciągła integracja/ciągłe wdrażanie za pomocą usługi Jenkins
+          href: /azure/jenkins/
+        - name: Azure DevOps
+          href: /azure/devops/java/
+    - name: Pojęcia
+      items:
+        - name: Wzorce i najlepsze rozwiązania
+          href: java-sdk-azure-concepts.md
+    - name: Samouczki
+      items:
+        - name: Wdrażanie mikrousług w usłudze Service Fabric
+          href: /azure/service-fabric/service-fabric-tutorial-create-java-app?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Środowisko Spring Boot w usłudze App Service z użyciem usługi Cosmos DB
+          href: /azure/app-service/containers/tutorial-java-spring-cosmosdb?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Ciągła integracja/ciągłe wdrażanie do usługi App Service przy użyciu usługi Azure Pipelines
+          href: /azure/devops/pipelines/languages/java-webapp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Ciągła integracja/ciągłe wdrażanie do usługi App Functions przy użyciu usługi Azure Pipelines
+          href: /azure/devops/pipelines/languages/java-function?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Ciągła integracja/ciągłe wdrażanie do usługi App Service przy użyciu usługi Jenkins
+          href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Wdrażanie w usłudze App Service za pomocą oprogramowania Maven
+          href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Wdrażanie kontenerów w usłudze App Service
+          href: spring-framework/deploy-containerized-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Wdrażanie w usłudze App Service z usługi Azure Container Registry
+          href: spring-framework/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Funkcje języka Java z użyciem usług Event Hub i Cosmos DB
+          href: /azure/azure-functions/functions-event-hub-cosmos-db?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Monitorowanie i rejestrowanie przy użyciu usługi Logz.io
+          href: java-get-started-with-logzio.md
+    - name: Artykuły z poradami
+      items:
+        - name: Dodawanie certyfikatu głównego
+          href: java-sdk-add-certificate-ca-store.md
+        - name: Uwierzytelnianie
+          href: java-sdk-azure-authenticate.md
+        - name: Migrowanie środowiska Java na platformę Azure
+          items:
+            - name: Omówienie
+              href: migration-overview.md
+            - name: Przechodzenie z platformy Spring do usługi Azure App Service
+              href: migrate-java-se-to-java-se-app-service.md
+            - name: Przechodzenie z oprogramowania Tomcat do usługi Azure App Service
+              href: migrate-tomcat-to-tomcat-app-service.md
+            - name: Przechodzenie z oprogramowania Tomcat do kontenerów w usłudze AKS
+              href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+            - name: Przechodzenie z oprogramowania WebLogic do usługi Azure Virtual Machines
+              href: migrate-weblogic-to-virtual-machines.md
+    - name: Przykłady kodu
+      items:
+        - name: Service Fabric
+          href: 'https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/'
+        - name: Maszyny wirtualne
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: Aplikacje internetowe
+          href: java-sdk-azure-web-apps-samples.md
+        - name: Baza danych SQL
+          href: java-sdk-azure-sql-database-samples.md
+        - name: Zabezpieczenia
+          href: java-sdk-azure-security-samples.md
+        - name: Containers
+          href: java-sdk-azure-containers-samples.md
+        - name: Wszystkie przykłady w języku Java
+          href: 'https://azure.microsoft.com/resources/samples/?platform=java'
+    - name: Dokumentacja
+      href: /java/api/?view=azure-java
