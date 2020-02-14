@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a98575021be229ed067ce424cd101721c98f9ea4
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: b6c8e138c9d738b56d237180e618268cb71284e3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "77000509"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144089"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure App Service dla kontenerów
 
@@ -22,18 +22,18 @@ W tym samouczku przedstawiono procedurę konteneryzacji aplikacji [Spring Boot] 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby wykonać kroki opisane w tym samouczku, należy spełnić następujące wymagania wstępne:
+Do wykonania kroków opisanych w tym samouczku wymagane są następujące elementy:
 
-* Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
+* Subskrypcja platformy Azure. Jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
 * [Interfejs wiersza polecenia platformy Azure].
 * Obsługiwany zestaw Java Development Kit (JDK). Aby uzyskać więcej informacji na temat zestawów JDK dostępnych do użycia podczas tworzenia aplikacji na platformie Azure, zobacz <https://aka.ms/azure-jdks>.
-* Narzędzie kompilacji [Maven] programu Apache (wersja 3).
+* Narzędzie kompilacji Apache [Maven] (wersja 3).
 * Klient usługi [Usługa Git].
 * Klient platformy [Docker].
 
 > [!NOTE]
 >
-> Ze względu na wymagania dotyczące wirtualizacji w tym samouczku nie można wykonać kroków opisanych w tym artykule na maszynie wirtualnej. Należy użyć komputera fizycznego z włączonymi funkcjami wirtualizacji.
+> Ze względu na wymagania tego samouczka dotyczące wirtualizacji nie można wykonać kroków opisanych w tym artykule na maszynie wirtualnej. Należy użyć komputera fizycznego z włączonymi funkcjami wirtualizacji.
 >
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Tworzenie aplikacji internetowej Pierwsze kroki Spring Boot na platformie Docker
@@ -223,7 +223,7 @@ Po zakończeniu wdrażania kliknij przycisk **Przejdź do zasobu**.  Na stronie 
 >
 > 4. Kliknij pozycję **Konfiguracja** na lewym pasku nawigacyjnym.
 >
-> 5. W sekcji **Ustawienia aplikacji** dodaj nowe ustawienie o nazwie **PORT** i wprowadź niestandardowy numer portu dla wartości.
+> 5. W sekcji **Ustawienia aplikacji** dodaj nowe ustawienie o nazwie **WEBSITES_PORT** i wprowadź niestandardowy numer portu dla wartości.
 >
 > 6. Kliknij przycisk **OK**. Następnie kliknij przycisk **Save** (Zapisz).
 >
@@ -265,7 +265,7 @@ Aby uzyskać więcej informacji o korzystaniu z aplikacji Spring Boot na platfor
 * [Wdrażanie aplikacji Spring Boot w usłudze Azure App Service](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
 * [Wdrażanie aplikacji platformy Spring Boot w klastrze Kubernetes w usłudze Azure Container Service](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Aby uzyskać więcej informacji na temat korzystania z platformy Azure przy użyciu języka Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] oraz [Praca z narzędziami Azure DevOps i językiem Java].
+Aby uzyskać więcej informacji na temat używania platformy Azure z językiem Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] i [Praca z narzędziami Azure DevOps i językiem Java].
 
 Aby uzyskać więcej informacji na temat przykładowego projektu aplikacji Spring Boot na platformie Docker, zobacz [Spring Boot na platformie Docker — Wprowadzenie].
 
@@ -273,7 +273,7 @@ Aby uzyskać pomoc dotyczącą rozpoczynania pracy z własnymi aplikacjami Sprin
 
 Aby uzyskać więcej informacji na temat rozpoczynania tworzenia prostej aplikacji Spring Boot, zapoznaj się z narzędziem Spring Initializr na stronie https://start.spring.io/.
 
-Aby uzyskać dodatkowe przykłady użycia niestandardowych obrazów platformy Docker z platformą Azure, zobacz [Używanie niestandardowego obrazu Docker dla usługi Azure Web App w systemie Linux].
+Aby uzyskać dodatkowe przykłady użycia niestandardowych obrazów platformy Docker na platformie Azure, zobacz [Używanie niestandardowego obrazu Docker dla usługi Azure Web App w systemie Linux].
 
 <!-- URL List -->
 
