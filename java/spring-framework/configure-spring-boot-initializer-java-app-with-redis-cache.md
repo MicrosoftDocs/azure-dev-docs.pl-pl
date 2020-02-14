@@ -3,16 +3,16 @@ title: Tworzenie aplikacji Spring Boot Initializr — usługa Azure Cache for Re
 description: Skonfiguruj aplikację Spring Boot utworzoną za pomocą narzędzia Spring Initializr do korzystania z usługi Redis w chmurze przy użyciu usługi Azure Cache for Redis.
 services: redis-cache
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: e70b5f9b8427bebd9c5ca3761a664464ad3b0909
-ms.sourcegitcommit: 670874dfe49e6ffa5bee88555851878f0da93042
+ms.openlocfilehash: 8287cf923acb5770a5ba5eb88fe60896e6cd3a4d
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "77000348"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075343"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Konfigurowanie aplikacji Spring Boot Initializr do korzystania z usługi Redis w chmurze przy użyciu usługi Azure Cache for Redis
 
@@ -20,7 +20,7 @@ W tym artykule przedstawiono tworzenie pamięci podręcznej Redis w chmurze przy
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby wykonać kroki opisane w tym artykule, wymagane są:
+Aby wykonać kroki opisane w tym artykule, wymagane są następujące elementy:
 
 * Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
 * Obsługiwany zestaw Java Development Kit (JDK). Aby uzyskać więcej informacji na temat zestawów JDK dostępnych do użycia podczas tworzenia aplikacji na platformie Azure, zobacz <https://aka.ms/azure-jdks>.
@@ -30,7 +30,10 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
 
 1. Przejdź do <https://start.spring.io/>.
 
-1. Określ, że chcesz wygenerować projekt **Maven** przy użyciu języka **Java**, wprowadź nazwy w polach **Group** (Grupa) i **Artifact** (Artefakt) dla aplikacji, a następnie kliknij link **Switch to the full version** (Przełącz do pełnej wersji), aby przejść do pełnej wersji narzędzia Spring Initializr.
+1. Określ, że chcesz wygenerować projekt **Maven** przy użyciu języka **Java**, wprowadź dla aplikacji nazwy w polach **Group** (Grupa) i **Artifact** (Artefakt).
+
+1. Dodaj zależności w sekcji **Spring Web** (Spring — Internet) i zaznacz pole wyboru **Web** (Internet), a następnie przewiń w dół do sekcji **NoSQL** i zaznacz pole wyboru **Spring Data Reactive Redis** (Reaktywna baza Redis danych Spring). 
+1. Przewiń w dół strony i kliknij przycisk **Generate Project** (Generuj projekt).
 
    ![Podstawowe opcje narzędzia Spring Initializr][SI01]
 
@@ -38,10 +41,6 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
    >
    > Narzędzie Spring Initializr użyje nazw z pól **Group** (Grupa) i **Artifact** (Artefakt), aby utworzyć nazwę pakietu, na przykład: *com.contoso.myazuredemo*.
    >
-
-1. Przewiń w dół do sekcji **Web** (Sieć Web) i zaznacz pole **Web** (Sieć Web), następnie przewiń w dół do sekcji **NoSQL** i zaznacz pole **Redis**, a następnie przewiń w dół strony i kliknij przycisk **Generate Project** (Generuj projekt).
-
-   ![Opcje pełnej wersji narzędzia Spring Initializr][SI02]
 
 1. Po wyświetleniu monitu pobierz projekt do ścieżki na komputerze lokalnym.
 
@@ -54,8 +53,6 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
 ## <a name="create-a-redis-cache-on-azure"></a>Tworzenie pamięci podręcznej Redis na platformie Azure
 
 1. Przejdź do witryny Azure Portal pod adresem <https://portal.azure.com/> i kliknij pozycję **+Nowy**.
-
-   ![Azure Portal][AZ01]
 
 1. Kliknij pozycję **Bazy danych**, a następnie pozycję **Redis Cache**.
 
@@ -125,7 +122,7 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
 
 1. Zapisz i zamknij plik *application.properties*.
 
-1. Utwórz folder o nazwie *controller* w folderze źródłowym pakietu, na przykład:
+1. Utwórz folder o nazwie *controller* w folderze źródłowym pakietu. Na przykład:
 
    `C:\SpringBoot\myazuredemo\src\main\java\com\contoso\myazuredemo\controller`
 
