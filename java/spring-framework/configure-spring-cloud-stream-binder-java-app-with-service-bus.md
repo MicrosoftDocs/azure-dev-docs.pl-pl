@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: 8c62a68ff2a9912d88361adc6ef3b8dc2ea29c98
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: e8f9dd93da56b17efca059e00cf1483666f4cf33
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002291"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075271"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Jak używać integratora strumienia Azure platformy Spring Cloud dla usługi Azure Service Bus
 
@@ -34,7 +34,7 @@ Wykonywanie czynności opisanych w tym artykule wymaga spełnienia wymienionych 
 1. Jeśli już Ci się udało skonfigurować kolejkę lub temat usługi Service Bus, upewnij się, że przestrzeń nazw Service Bus spełnia następujące wymagania:
 
     1. Zezwala na dostęp ze wszystkich sieci
-    1. Jest w warstwie Premium (lub wyższej)
+    1. Jest w warstwie Standardowa (lub wyższej)
     1. Ma wdrożone zasady dostępu z dostępem do odczytu/zapisu kolejki i tematu
 
 1. Jeśli nie masz skonfigurowanej kolejki ani tematu usługi Service Bus, utwórz [kolejkę usługi Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal) lub [temat usługi Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal) w witrynie Azure Portal. Upewnij się, że przestrzeń nazw spełnia wymagania określone w poprzednim kroku. Zanotuj również parametry połączenia w przestrzeni nazw, ponieważ będą one potrzebne podczas korzystania z aplikacji testowej tego samouczka.
