@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: b6c8e138c9d738b56d237180e618268cb71284e3
-ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
+ms.openlocfilehash: 9288f680f5eb92046ada7ce420d64de2e5301fcc
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144089"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440974"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure App Service dla kontenerów
 
@@ -51,7 +51,7 @@ Poniżej przedstawiono kroki wymagane do utworzenia prostej aplikacji internetow
    cd /users/robert/SpringBoot
    ```
 
-1. Sklonuj przykładowy projekt Spring Boot on Docker ([Spring Boot na platformie Docker — Wprowadzenie]) do utworzonego katalogu, na przykład:
+1. Sklonuj przykładowy projekt [Spring Boot na platformie Docker — wprowadzenie] do utworzonego katalogu, na przykład:
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
@@ -140,10 +140,10 @@ Określ nazwę użytkownika i hasło w okienku rejestru w węźle `<to>/<auth>`.
             <image>openjdk:8-jre-alpine</image>
         </from>
         <to>
-            <image>{docker.image.prefix}/{project.artifactId}</image>
+            <image>${docker.image.prefix}/${project.artifactId}</image>
             <auth>
-               <username>{username}</username>
-               <password>{password}</password>
+               <username>${username}</username>
+               <password>${password}</password>
             </auth>
         </to>
      </configuration>
@@ -284,13 +284,13 @@ Aby uzyskać dodatkowe przykłady użycia niestandardowych obrazów platformy Do
 [Tworzenie prywatnego rejestru kontenerów platformy Docker za pomocą witryny Azure Portal]: /azure/container-registry/container-registry-get-started-portal
 [Używanie niestandardowego obrazu Docker dla usługi Azure Web App w systemie Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
-[bezpłatne konto platformy Azure]: https://azure.microsoft.com/pricing/free-trial/
+[Bezpłatne konto platformy Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Usługa Git]: https://github.com/
 [Praca z narzędziami Azure DevOps i językiem Java]: /azure/devops/java/
 [Maven]: http://maven.apache.org/
 [Korzyści dla subskrybentów MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot na platformie Docker — Wprowadzenie]: https://github.com/spring-guides/gs-spring-boot-docker
+[Spring Boot na platformie Docker — wprowadzenie]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks

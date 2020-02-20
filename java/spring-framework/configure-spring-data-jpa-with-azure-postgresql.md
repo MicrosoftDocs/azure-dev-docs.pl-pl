@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 5748f3e51132ff003e41d61f9c10dff61b95e364
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "77000684"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422543"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Jak używać interfejsu Spring Data JPA z usługą Azure PostgreSQL
 
@@ -21,10 +21,10 @@ W tym artykule przedstawiono tworzenie przykładowej aplikacji, która używa na
 
 Aby wykonać kroki opisane w tym artykule, wymagane są:
 
-* Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
+* Subskrypcja platformy Azure. Jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
 * Obsługiwany zestaw Java Development Kit (JDK). Aby uzyskać więcej informacji na temat zestawów JDK dostępnych do użycia podczas tworzenia aplikacji na platformie Azure, zobacz <https://aka.ms/azure-jdks>.
-* Narzędzie [Apache Maven](http://maven.apache.org/) w wersji 3.0 lub nowszej.
-* [Curl](https://curl.haxx.se/) lub podobne narzędzie HTTP do testowania funkcjonalności. lub podobne narzędzie HTTP do testowania funkcjonalności.
+* Narzędzie [Apache Maven](http://maven.apache.org/), wersja 3.0 lub nowsza.
+* [Curl](https://curl.haxx.se/) lub podobne narzędzie HTTP do testowania funkcjonalności.
 * Narzędzie wiersza polecenia [psql](https://www.postgresql.org/docs/current/app-psql.html).
 * Klient usługi [Git](https://git-scm.com/downloads).
 
@@ -219,13 +219,13 @@ Aby dowiedzieć się więcej na temat oprogramowania Spring i platformy Azure, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby uzyskać więcej informacji na temat korzystania z platformy Azure z językiem Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] i [Working with Azure DevOps and Java] (Praca z narzędziami Azure DevOps i językiem Java).
+Aby uzyskać więcej informacji na temat korzystania z platformy Azure przy użyciu języka Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] oraz [Praca z narzędziami Azure DevOps i językiem Java].
 
 <!-- URL List -->
 
 [Azure dla deweloperów języka Java]: /azure/java/
 [Bezpłatne konto platformy Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Praca z narzędziami Azure DevOps i językiem Java)
+[Praca z narzędziami Azure DevOps i językiem Java]: /azure/devops/
 [Korzyści dla subskrybentów MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Data]: https://spring.io/projects/spring-data
