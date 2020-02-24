@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77000775"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440857"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrowanie aplikacji Java na platformę Azure
 
@@ -48,7 +48,7 @@ Aplikacje internetowe są pakowane w archiwa z rozszerzeniem *WAR* (pliki WAR).
 
 ### <a name="java-ee-applications"></a>Aplikacje Java EE
 
-Aplikacje Java EE (nazywane również aplikacjami J2EE lub od niedawna aplikacjami JakartaEE) mogą zawierać niektóre lub wszystkie elementy aplikacji internetowych albo nie zawierać ich wcale. Mogą również zawierać i zużywać wiele dodatkowych składników zdefiniowanych w [specyfikacji języka Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
+Aplikacje Java EE (nazywane również aplikacjami J2EE lub od niedawna aplikacjami Jakarta EE) mogą zawierać niektóre lub wszystkie elementy aplikacji internetowych albo nie zawierać ich wcale. Mogą również zawierać i zużywać wiele dodatkowych składników zdefiniowanych w [specyfikacji języka Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
 
 Aplikacje Java EE można pakować jako archiwa z rozszerzeniem *EAR* (pliki EAR) lub jako archiwa z rozszerzeniem *WAR* (pliki WAR).
 
