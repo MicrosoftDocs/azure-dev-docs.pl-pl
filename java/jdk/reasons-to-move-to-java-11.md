@@ -1,18 +1,19 @@
 ---
 title: Powody do migracji do środowiska Java 11
+titleSuffix: Azure
 description: Dokument podsumowujący przeznaczony dla osób podejmujących decyzje, które rozważają korzyści przejścia ze środowiska Java 8 do środowiska Java 11.
 author: dsgrieve
-manager: maverberg
+manager: maverbur
 tags: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: 7daf058c2abebbf2cca85dadc4f9ffe3e8771fa1
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: c0a2f46f8a3249f6c9580e823e102a86291e15e7
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "76999942"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440932"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Powody do migracji do środowiska Java 11
 
@@ -25,13 +26,13 @@ Dodano nowe funkcje i wprowadzono ulepszenia względem środowiska Java 8. Dodan
 Przejście do środowiska Java 11 można wykonać stopniowo. Aby kod działał on w środowisku Java 11, *nie* jest wymagane stosowanie modułów Java. Środowisko Java 11 może służyć do uruchamiania kodu opracowanego i utworzonego za pomocą zestawu JDK 8.
 Jednak istnieją potencjalne problemy, dotyczące głównie przestarzałego interfejsu API, modułów ładujących klasy i odbicia.
 
-Kompleksowy przewodnik przejścia ze środowiska Java 8 do środowiska Java 11 zostanie w przyszłości udostępniony przez grupę inżynierów Java firmy Microsoft. Tymczasem dostępnych jest wiele przewodników dotyczących przejścia ze środowiska Java 8 do środowiska Java 9, które ułatwią rozpoczęcie pracy. Na przykład [Java Platform, Standard Edition Oracle JDK 9 Migration Guide](https://docs.oracle.com/javase/9/migrate/toc.htm) (Pla Java, Oracle JDK 9 Standard Edition — Przewodnik migracji) i [The State of the Module System: Compatibility and Migration](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration) (Stan systemu modułów: zgodność i migracja).
+Zespół inżynierów języka Java w firmie Microsoft przygotował przewodnik [przejścia ze środowiska Java 8 do środowiska Java 11](./transition-from-java-8-to-java-11.md). Inne przydatne przewodniki to [Java Platform, Standard Edition Oracle JDK 9 Migration Guide](https://docs.oracle.com/javase/9/migrate/toc.htm) (Platforma Java, Oracle JDK 9 Standard Edition — Przewodnik migracji) i [The State of the Module System: Compatibility and Migration](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration) (Stan systemu modułowego: zgodność i migracja). 
 
 ## <a name="high-level-changes-between-java-8-and-11"></a>Zmiany wysokiego poziomu w środowisku Java 11 względem środowiska Java 8
 
 W tej sekcji nie przedstawiono listy wszystkich zmian dokonanych w środowisku Java w wersjach 9 \[[1](#ref1)\], 10 \[[2](#ref2)\] i 11 \[[3](#ref3)\]. Wyróżniono zmiany, które mają wpływ na wydajność, diagnostykę i produktywność.
 
-### <a name="modules-4ref4"></a>Moduły \[[4](#ref4)\]
+### <a name="modules-4"></a>Moduły \[[4](#ref4)\]
 
 Moduły rozwiązują problemy dotyczące konfiguracji i hermetyzacji, którymi trudno zarządzać w aplikacjach o dużej skali uruchomionych na *ścieżce klasy*. *Moduł* to samoopisująca kolekcja klas i interfejsów języka Java oraz powiązanych zasobów.
 
@@ -46,31 +47,31 @@ Aplikacja może nadal używać *ścieżki klas*, a przejście na moduły nie jes
 
 ### <a name="profiling-and-diagnostics"></a>Profilowanie i diagnostyka
 
-#### <a name="java-flight-recorder-5ref5"></a>Java Flight Recorder \[[5](#ref5)\]
+#### <a name="java-flight-recorder-5"></a>Java Flight Recorder \[[5](#ref5)\]
 
 Narzędzie Java Flight Recorder (JFR) zbiera dane diagnostyczne i profilowania z uruchomionej aplikacji Java. JFR ma niewielki wpływ na działającą aplikację Java. Zebrane dane można następnie analizować przy użyciu narzędzia Java Mission Control (JMC) i innych narzędzi. Narzędzia JFR i JMC były funkcjami komercyjnymi w środowisku Java 8, jednak oba te narzędzia stanowią oprogramowanie open source w środowisku Java 11.
 
-#### <a name="java-mission-control-6ref6"></a>Java Mission Control \[[6](#ref6)\]
+#### <a name="java-mission-control-6"></a>Java Mission Control \[[6](#ref6)\]
 
 Narzędzie Java Mission Control (JMC) zapewnia graficzne wyświetlanie danych zebranych przez narzędzie Java Flight Recorder (JFR) i jest oprogramowaniem open source w języku Java.
 11. Oprócz ogólnych informacji o działającej aplikacji JMC umożliwia użytkownikowi przechodzenie do szczegółów danych. JFR i JMC mogą służyć do diagnozowania problemów dotyczących środowiska uruchomieniowego, takich jak przecieki pamięci, obciążenie GC, metody gorące, wąskie gardła wątków i blokowanie operacji we/wy.
 
-#### <a name="unified-logging-7ref7"></a>Ujednolicone rejestrowanie \[[7](#ref7)\]
+#### <a name="unified-logging-7"></a>Ujednolicone rejestrowanie \[[7](#ref7)\]
 
 Środowisko Java 11 ma wspólny system rejestrowania dla wszystkich składników JVM.
 Ten ujednolicony system rejestrowania umożliwia użytkownikowi definiowanie składników do rejestrowania oraz jego poziomu. To szczegółowe rejestrowanie jest przydatne do wykonywania analiz głównych przyczyn w przypadku awarii JVM oraz do diagnozowania problemów z wydajnością w środowisku produkcyjnym.
 
-#### <a name="low-overhead-heap-profiling-8ref8"></a>Profilowanie sterty z niskim obciążeniem \[[8](#ref8)\]
+#### <a name="low-overhead-heap-profiling-8"></a>Profilowanie sterty z niskim obciążeniem \[[8](#ref8)\]
 
 Dodano nowy interfejs API do interfejsu JVMTI (Java Virtual Machine Tool Interface) służący do próbkowania alokacji sterty Java. Próbkowanie powoduje niewielkie obciążenie i może być stale włączone. Alokacja sterty może być monitorowana przy użyciu narzędzia Java Flight Recorder (JFR), metoda próbkowania w JFR działa tylko w przypadku alokacji. Implementacja JFR może również pomijać alokacje. Natomiast próbkowanie sterty w środowisku Java 11 umożliwia uzyskiwanie informacji o obiektach aktywnych i nieaktywnych.
 
 Dostawcy rozwiązań monitorowania wydajności aplikacji (APM) zaczynają korzystać z tej nowej funkcji, a grupa inżynierów Java bada jej potencjalne możliwości jej wykorzystania za pomocą narzędzi do monitorowania wydajności platformy Azure.
 
-#### <a name="stackwalker-9ref9"></a>StackWalker \[[9](#ref9)\]
+#### <a name="stackwalker-9"></a>StackWalker \[[9](#ref9)\]
 
 Pobieranie migawki stosu dla bieżącego wątku jest często używane podczas rejestrowania. Problem polega na tym, jaki zakres śladu stosu ma być rejestrowany, oraz czy w ogóle należy rejestrować ślad stosu. Na przykład jedna osoba może chcieć zobaczyć ślad stosu tylko dla pewnego wyjątku z metody. Klasa StackWalker (dodana w języku Java 9) zawiera migawkę stosu i udostępnia metody, które umożliwiają programistom precyzyjne sterowanie sposobem korzystania ze śladu stosu.
 
-### <a name="garbage-collection-10ref10"></a>Odzyskiwanie pamięci \[[10](#ref10)\]
+### <a name="garbage-collection-10"></a>Odzyskiwanie pamięci \[[10](#ref10)\]
 
 W środowisku Java 11 dostępne są następujące moduły odzyskiwania pamięci: Serial, Parallel, Garbage-First i Epsilon. Domyślny moduł zbierający elementy bezużyteczne w środowisku Java 11 to Garbage First Garbage Collector (G1GC).
 
@@ -88,12 +89,12 @@ Domyślny moduł zbierający elementy bezużyteczne w środowisku Java 11 to mod
 
 Równoległy moduł zbierający jest domyślnym modułem zbierającym w środowisku Java 8. Równoległy moduł zbierający jest modułem zbierającym przepływności, który korzysta z wielu wątków w celu przyspieszenia odzyskiwania pamięci.
 
-#### <a name="epsilon-11ref11"></a>Epsilon \[[11](#ref11)\]
+#### <a name="epsilon-11"></a>Epsilon \[[11](#ref11)\]
 
 Moduł zbierający Epsilon obsługuje alokacje, ale nie odzyskuje pamięci. Po wyczerpaniu sterty wirtualna maszyna Java (JVM) zostanie zamknięta.
 Moduł Epsilon jest przydatny w przypadku krótkoterminowych usług i aplikacji, które są wolne od elementów bezużytecznych.
 
-#### <a name="improvements-for-docker-containers-12ref12"></a>Ulepszenia dotyczące kontenerów platformy Docker \[[12](#ref12)\]
+#### <a name="improvements-for-docker-containers-12"></a>Ulepszenia dotyczące kontenerów platformy Docker \[[12](#ref12)\]
 
 W środowiskach starszych niż Java 10 ograniczenia dotyczące pamięci i procesora CPU ustawione w kontenerze nie były rozpoznawane przez JVM. Na przykład w środowisku Java 8 JVM domyśnie ustawia maksymalny rozmiar sterty na ¼ pamięci fizycznej podstawowego hosta. Począwszy od środowiska Java 10, JVM używa ograniczeń ustawionych przez grupy kontroli kontenerów (cgroup) do ustawiania limitów pamięci i procesora (patrz uwaga poniżej).
 Na przykład domyślny maksymalny rozmiar sterty to ¼ limitu pamięci kontenera (np. 500 MB dla -m2G).
@@ -105,7 +106,7 @@ Ta obsługa jest domyślnie włączona i jest dostępna tylko na platformach opa
 > [!NOTE]
 > Większość zmian związanych z obsługą cgroup została wdrożona w środowisku Java 8 od wersji jdk8u191. Dalsze ulepszenia niekoniecznie zostaną dostosowane do wersji 8.
 
-#### <a name="multi-release-jar-files-13ref13"></a>Pliki jar zawierające wiele wersji \[[13](#ref13)\]
+#### <a name="multi-release-jar-files-13"></a>Pliki jar zawierające wiele wersji \[[13](#ref13)\]
 
 W środowisku Java 11 można utworzyć plik JAR, który zawiera wiele wersji plików klas przeznaczonych dla określonych wydań środowiska Java. Pliki jar z wieloma wersjami umożliwiają deweloperom bibliotek obsługę wielu wersji środowiska Java bez konieczności dostarczania wielu wersji plików jar. W przypadku użytkowników tych bibliotek pliki jar zawierające różne wersje rozwiązują problem z koniecznością dopasowania określonych plików jar do określonych elementów docelowych środowiska uruchomieniowego.
 
