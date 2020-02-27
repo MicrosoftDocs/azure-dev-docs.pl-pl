@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: a5e36d535cba39728d28c1f2aa64985863103ee6
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441091"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504553"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Przejście ze środowiska Java 8 do środowiska Java 11
 
@@ -26,7 +26,7 @@ Istnieją dwa ogólne podejścia — próba uruchomienia aplikacji w środowisku
 
 Przejście środowiska Java 11 jest warte wymaganych nakładów pracy. Dodano w nim nowe funkcje i wprowadzono ulepszenia względem środowiska Java 8. Te funkcje i ulepszenia przekładają się między innymi na usprawnienie uruchamiania oraz poprawę wydajności, użycia pamięci i integracji z kontenerami. Ponadto uzupełniono i zmodyfikowano interfejsy API w sposób zwiększający produktywność deweloperów. 
 
-W tym dokumencie pokrótce omówiono narzędzia do sprawdzania kodu. Wymieniono także potencjalne problemy i zalecenia dotyczące ich rozwiązywania. Warto skorzystać również z innych przewodników, na przykład przewodnika [Oracle JDK Migration Guide](https://docs.oracle.com/en/java/javase/11/migrate/index.htm) (Przewodnik po migracji dla zestawu Oracle JDK). Nie omówiono tutaj sposobu przekształcania istniejącego kodu w kod [modułowy](http://openjdk.java.net/projects/jigsaw).  
+W tym dokumencie pokrótce omówiono narzędzia do sprawdzania kodu. Wymieniono także potencjalne problemy i zalecenia dotyczące ich rozwiązywania. Warto skorzystać również z innych przewodników, na przykład przewodnika [Oracle JDK Migration Guide](https://docs.oracle.com/en/java/javase/11/migrate/index.html) (Przewodnik po migracji dla zestawu Oracle JDK). Nie omówiono tutaj sposobu przekształcania istniejącego kodu w kod [modułowy](http://openjdk.java.net/projects/jigsaw).  
 
 
 ## <a name="the-toolbox"></a>Zestaw narzędzi
@@ -125,7 +125,7 @@ Jeśli problem wymaga rozwiązania w kodzie, należy wprowadzić poprawkę, a na
 ### <a name="check-command-line-options"></a>Sprawdzanie opcji wiersza polecenia
 
 Przed uruchomieniem aplikacji w środowisku Java 11 przejrzyj opcje dostępne w wierszu polecenia. 
-Użycie [usuniętych opcji](#unrecognized options) spowoduje zakończenie działania wirtualnej maszyny Java. Jest to szczególnie istotne, jeśli korzystasz z opcji rejestrowania podczas odzyskiwania pamięci, ponieważ zostały one znacząco zmienione względem wersji Java 8. Narzędzie [JaCoLine](https://jacoline.dev/about) jest przydatne podczas wykrywania problemów z opcjami wiersza polecenia. 
+Użycie [usuniętych opcji](#unrecognized-options) spowoduje zakończenie działania wirtualnej maszyny Java. Jest to szczególnie istotne, jeśli korzystasz z opcji rejestrowania podczas odzyskiwania pamięci, ponieważ zostały one znacząco zmienione względem wersji Java 8. Narzędzie [JaCoLine](https://jacoline.dev/about) jest przydatne podczas wykrywania problemów z opcjami wiersza polecenia. 
 
 ### <a name="check-third-party-libraries"></a>Sprawdzanie bibliotek innych firm
 
@@ -189,11 +189,11 @@ Opcje, które nie są już obsługiwane, nie mają wpływu na środowisko urucho
 
 Na stronie internetowej [VM Options Explorer](https://chriswhocodes.com/hotspot_option_differences.html) (Eksplorator opcji maszyny wirtualnej) można znaleźć wyczerpującą listę opcji dodanych i usuniętych w środowisku Java od wersji zestawu JDK 7. 
 
-#### <a name="error-could-not-create-the-java-virtual-machine"></a>Error: Could not create the Java Virtual Machine (Błąd: nie można utworzyć wirtualnej maszyny Java)
+#### <a name="error-could-not-create-the-java-virtual-machine"></a>Błąd: Could not create the Java Virtual Machine (Błąd: nie można utworzyć wirtualnej maszyny Java)
 
 Ten komunikat o błędzie jest zwracany, gdy wirtualna maszyna Java napotka [nierozpoznaną opcję](#unrecognized-options).
 
-#### <a name="warning-an-illegal-reflective-access-operation-has-occurred"></a>WARNING: An illegal reflective access operation has occurred (Ostrzeżenie: wystąpiła niedozwolona operacja dostępu z użyciem odbicia)
+#### <a name="warning-an-illegal-reflective-access-operation-has-occurred"></a>OSTRZEŻENIE: An illegal reflective access operation has occurred (Ostrzeżenie: wystąpiła niedozwolona operacja dostępu z użyciem odbicia)
 
 W przypadku użycia odbicia w kodzie Java w celu uzyskania dostępu do wewnętrznego interfejsu API zestawu JDK środowisko uruchomieniowe wygeneruje ostrzeżenie o niedozwolonym dostępie z użyciem odbicia.
 

@@ -4,14 +4,14 @@ description: Dowiedz się, jak korzystać z obrazów platformy Docker z zestawem
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: d7647757f371baa0b6fd21bd51d6629c6e1e0e10
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: b3a046563fa51efae32fd45e6154901539a8f4c8
+ms.sourcegitcommit: 6ffa53b933da524e09911b164bba8515722bfa91
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "76999949"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629372"
 ---
-# <a name="use-docker-with-a-java-development-kit-jdk-for-azure"></a>Używanie platformy Docker z zestawem Java Development Kit (JDK) dla platformy Azure 
+# <a name="use-docker-with-a-java-development-kit-jdk-for-azure"></a>Używanie platformy Docker z zestawem Java Development Kit (JDK) dla platformy Azure
 
 W tym artykule opisano sposób korzystania z platformy Docker z zestawem Java Development Kit (JDK) dla platformy Azure. Wstępnie skompilowane obrazy platformy Docker dla języka Java w wersji 7, 8 i 11 są dostępne za pośrednictwem usługi [Docker Hub](https://hub.docker.com/_/microsoft-java-se).
 
@@ -26,7 +26,7 @@ Certyfikowane obrazy kontenerów platformy Docker dla środowisk Zulu JDK, JRE i
 Obrazy platformy Docker można uruchamiać przy użyciu składni `$ docker run mcr.microsoft.com/java/jdk:tag java`, jak pokazano w poniższym przykładzie.
 
 ```cli
-docker run mcr.microsoft.com/java/jdk:8u212-zulu-alpine java -version 
+docker run mcr.microsoft.com/java/jdk:8-zulu-alpine java -version
 ```
 
 ## <a name="creating-a-docker-image"></a>Tworzenie obrazu platformy Docker
@@ -36,7 +36,7 @@ Obraz można utworzyć przy użyciu oficjalnych obrazów usługi Docker Hub firm
 ### <a name="create-a-docker-file"></a>Tworzenie pliku platformy Docker
 
 ```cli
-FROM mcr.microsoft.com/java/jdk:8u212-zulu-alpine 
+FROM mcr.microsoft.com/java/jdk:8-zulu-alpine
   
 RUN echo $' \
   
