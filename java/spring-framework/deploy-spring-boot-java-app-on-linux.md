@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 9288f680f5eb92046ada7ce420d64de2e5301fcc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440974"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504435"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure App Service dla kontenerów
 
