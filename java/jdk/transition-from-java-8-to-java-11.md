@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 528b111e945bb68bd18c849847522a070259c0f3
+ms.sourcegitcommit: f1e3c72c38376b15f5313d4bfe5fefdbfc022dc9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504553"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022298"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Przejście ze środowiska Java 8 do środowiska Java 11
 
@@ -246,7 +246,7 @@ Ten problem można rozwiązać, używając opcji `--patch-module <module-name>=<
 
 ##### <a name="noclassdeffounderror-caused-by-using-java-ee-or-corba-modules"></a>Błąd NoClassDefFoundError powodowany przez użycie modułów Java EE lub CORBA
 
-Jeśli aplikacja działa w środowisku Java 8, ale zwraca błąd `java.lang.NoClassDefFoundError` lub `java.lang.ClassNotFoundError`, prawdopodobnie korzysta ona z pakietu pochodzącego z modułów Java EE lub CORBA. Te moduły zostały określone jako przestarzałe w środowisku Java 9, a [usunięte w środowisku Java 11](https://openjdk.java.net/jeps/320). 
+Jeśli aplikacja działa w środowisku Java 8, ale zwraca błąd `java.lang.NoClassDefFoundError` lub `java.lang.ClassNotFoundException`, prawdopodobnie korzysta ona z pakietu pochodzącego z modułów Java EE lub CORBA. Te moduły zostały określone jako przestarzałe w środowisku Java 9, a [usunięte w środowisku Java 11](https://openjdk.java.net/jeps/320). 
 
 Aby rozwiązać ten problem, dodaj do projektu zależność środowiska uruchomieniowego.
 

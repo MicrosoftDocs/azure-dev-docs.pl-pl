@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77000768"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893758"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrowanie aplikacji serwera Tomcat do serwera Tomcat w usłudze Azure App Service
 
@@ -23,7 +23,7 @@ Jeśli nie można spełnić wymagań wstępnych dla migracji, należy zapoznać 
 * [Migrowanie aplikacji serwera Tomcat do kontenerów w usłudze Azure Kubernetes Service](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Migrowanie aplikacji serwera Tomcat do usługi Azure Virtual Machines (zaplanowane)
 
-## <a name="pre-migration-steps"></a>Kroki przed migracją
+## <a name="pre-migration"></a>Czynności przed migracją
 
 ### <a name="switch-to-a-supported-platform"></a>Przełączanie na obsługiwaną platformę
 
@@ -201,18 +201,18 @@ Przeprowadź migrację, kopiując wszelkie dodatkowe konfiguracje (na przykład 
 
 Na koniec musisz ponownie uruchomić aplikację internetową, aby zastosować wszystkie zmiany konfiguracji. Po zakończeniu ponownego uruchamiania sprawdź, czy aplikacja działa prawidłowo.
 
-## <a name="post-migration-steps"></a>Kroki po migracji
+## <a name="post-migration"></a>Czynności po migracji
 
 Po przeprowadzeniu migracji aplikacji do usługi Azure App Service sprawdź, czy działa ona zgodnie z oczekiwaniami. Po wykonaniu tych czynności skorzystaj z naszych zaleceń, dzięki którym Twoja aplikacja będzie bardziej natywna dla chmury.
 
 ### <a name="recommendations"></a>Zalecenia
 
-1. Jeśli przechowujesz pliki w katalogu */home*, rozważ [zastąpienie go usługą Azure Storage](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
+* Jeśli przechowujesz pliki w katalogu */home*, rozważ [zastąpienie go usługą Azure Storage](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
 
-1. Jeśli konfiguracja znajduje się w katalogu */home*, który zawiera parametry połączenia, klucze SSL i inne informacje dotyczące wpisów tajnych, rozważ użycie usługi [Azure Key Vault](/azure/app-service/app-service-key-vault-references) w połączeniu ze [wstrzykiwaniem parametrów z ustawieniami aplikacji](/azure/app-service/configure-common#configure-app-settings) (tam, gdzie to możliwe).
+* Jeśli konfiguracja znajduje się w katalogu */home*, który zawiera parametry połączenia, klucze SSL i inne informacje dotyczące wpisów tajnych, rozważ użycie usługi [Azure Key Vault](/azure/app-service/app-service-key-vault-references) w połączeniu ze [wstrzykiwaniem parametrów z ustawieniami aplikacji](/azure/app-service/configure-common#configure-app-settings) (tam, gdzie to możliwe).
 
-1. Rozważ [użycie miejsc wdrożenia](/azure/app-service/deploy-staging-slots), aby uzyskać niezawodne wdrożenia bez przestojów.
+* Rozważ [użycie miejsc wdrożenia](/azure/app-service/deploy-staging-slots), aby uzyskać niezawodne wdrożenia bez przestojów.
 
-1. Zaprojektuj i zaimplementuj strategię DevOps. Aby zachować niezawodność przy jednoczesnym zwiększaniu szybkości tworzenia rozwiązań, rozważ [automatyzację wdrożeń i testowania przy użyciu usługi Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Jeśli używasz miejsc wdrożenia, możesz [zautomatyzować wdrożenie w miejscu](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) i kolejną zamianę miejsc.
+* Zaprojektuj i zaimplementuj strategię DevOps. Aby zachować niezawodność przy jednoczesnym zwiększaniu szybkości tworzenia rozwiązań, rozważ [automatyzację wdrożeń i testowania przy użyciu usługi Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Jeśli używasz miejsc wdrożenia, możesz [zautomatyzować wdrożenie w miejscu](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) i kolejną zamianę miejsc.
 
-1. Zaprojektuj i zaimplementuj strategię ciągłości działania i odzyskiwania po awarii. W przypadku aplikacji o krytycznym znaczeniu rozważ zastosowanie [architektury wdrażania w wielu regionach](/azure/architecture/reference-architectures/app-service-web-app/multi-region).
+* Zaprojektuj i zaimplementuj strategię ciągłości działania i odzyskiwania po awarii. W przypadku aplikacji o krytycznym znaczeniu rozważ zastosowanie [architektury wdrażania w wielu regionach](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

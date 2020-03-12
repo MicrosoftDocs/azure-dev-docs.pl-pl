@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 5a9f6838e516b6168be40c83ea1ff4329676e6e3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77000810"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894200"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Migrowanie wykonywalnych aplikacji internetowych JAR do środowiska Java SE w usłudze Azure App Service
 
@@ -23,7 +23,7 @@ Jeśli nie można spełnić wymagań wstępnych dla migracji, należy zapoznać 
 * Migrowanie wykonywalnych aplikacji JAR do kontenerów w usłudze Azure Kubernetes Service (zaplanowane)
 * Migrowanie wykonywalnych aplikacji JAR do usługi Azure Virtual Machines (zaplanowane)
 
-## <a name="pre-migration-steps"></a>Kroki przed migracją
+## <a name="pre-migration"></a>Czynności przed migracją
 
 ### <a name="switch-to-a-supported-platform"></a>Przełączanie na obsługiwaną platformę
 
@@ -209,7 +209,7 @@ Wykonaj [poniższe czynności, aby przeprowadzić migrację parametrów połącz
 
 Na koniec musisz ponownie uruchomić aplikację internetową, aby zastosować wszystkie zmiany konfiguracji. Po zakończeniu ponownego uruchamiania sprawdź, czy aplikacja działa prawidłowo.
 
-## <a name="post-migration-steps"></a>Kroki po migracji
+## <a name="post-migration"></a>Czynności po migracji
 
 Po przeprowadzeniu migracji aplikacji do usługi Azure App Service sprawdź, czy działa ona zgodnie z oczekiwaniami. Po wykonaniu tych czynności skorzystaj z naszych zaleceń, które mogą sprawić, że aplikacja będzie bardziej natywna w chmurze.
 
