@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504435"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893703"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure App Service dla kontenerów
 
@@ -215,7 +215,7 @@ Po zakończeniu wdrażania kliknij przycisk **Przejdź do zasobu**.  Na stronie 
 
 > [!NOTE]
 >
-> Platforma Azure będzie automatycznie mapować żądania internetowe na osadzony serwer Tomcat, który działa na standardowych portach 80 lub 8080. Jednak jeśli osadzony serwer Tomcat został skonfigurowany tak, aby był uruchamiany na niestandardowym porcie, należy dodać do aplikacji internetowej zmienną środowiskową, która definiuje port osadzonego serwera Tomcat. Aby to zrobić, wykonaj następujące kroki:
+> Platforma Azure będzie automatycznie mapować żądania internetowe na osadzony serwer Tomcat, który działa na porcie 80. Jednak jeśli osadzony serwer Tomcat został skonfigurowany tak, aby był uruchamiany na porcie 8080 lub niestandardowym porcie, należy dodać do aplikacji internetowej zmienną środowiskową, która definiuje port osadzonego serwera Tomcat. Aby to zrobić, wykonaj następujące kroki:
 >
 > 1. Przejdź do witryny [Azure Portal] i zaloguj się.
 > 

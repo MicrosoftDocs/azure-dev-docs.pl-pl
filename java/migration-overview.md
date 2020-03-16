@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440857"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089950"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrowanie aplikacji Java na platformę Azure
 
@@ -73,16 +73,16 @@ W poniższych sekcjach pokazano, które lokalizacje docelowe usługi spełniają
 
 Poniższa siatka umożliwia zidentyfikowanie lokalizacji docelowych, które obsługują wymagane typy i funkcje aplikacji.
 
-|   |Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Aplikacja<br>Usługa<br>WildFly|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
+|   |Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
 |---|---|---|---|---|---|---|
-| Aplikacje Spring Boot/JAR                                    |&#x2714;|        |        |        |&#x2714;|&#x2714;|
-| Spring Cloud/mikrousługi                                      |        |        |        |&#x2714;|&#x2714;|&#x2714;|
-| Aplikacje internetowe                                                  |        |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| Aplikacje Java EE                                              |        |        |&#x2714;|        |&#x2714;|&#x2714;|
-| Komercyjne serwery aplikacji<br>(na przykład WebLogic lub WebSphere) |        |        |        |        |&#x2714;|&#x2714;|
-| Długoterminowa trwałość lokalnego systemu plików                         |&#x2714;|&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| Klastrowanie na poziomie serwera aplikacji                               |        |        |        |        |&#x2714;|&#x2714;|
-| Batch/zaplanowane zadania                                            |        |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Aplikacje Spring Boot/JAR                                    |&#x2714;|        |        |&#x2714;|&#x2714;|
+| Spring Cloud/mikrousługi                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Aplikacje internetowe                                                  |        |&#x2714;|        |&#x2714;|&#x2714;|
+| Aplikacje Java EE                                              |        |        |        |&#x2714;|&#x2714;|
+| Komercyjne serwery aplikacji<br>(na przykład WebLogic lub WebSphere) |        |        |        |&#x2714;|&#x2714;|
+| Długoterminowa trwałość lokalnego systemu plików                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
+| Klastrowanie na poziomie serwera aplikacji                               |        |        |        |&#x2714;|&#x2714;|
+| Batch/zaplanowane zadania                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
 
 ### <a name="ongoing-responsibility-grid"></a>Siatka stałych obowiązków
 
@@ -127,22 +127,26 @@ Poniższe siatki umożliwiają znajdowanie wskazówek dotyczących migracji wed�
 
 W poniższych wierszach możesz znaleźć typ aplikacji Java i kolumny zawierające lokalizację docelową usługi platformy Azure, w której będzie hostowana Twoja aplikacja.
 
-|Lokalizacja docelowa&nbsp;→<br><br>Typ&nbsp;aplikacji&nbsp;↓|Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Aplikacja<br>Usługa<br>WildFly|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
+Jeśli chcesz przeprowadzić migrację aplikacji JBoss EAP na serwer Tomcat w usłudze App Service, najpierw przekonwertuj aplikację Java EE na aplikacje internetowe Java (serwlety) działające na serwerze Tomcat, a następnie postępuj zgodnie z wytycznymi poniżej.
+
+Jeśli chcesz przeprowadzić migrację aplikacji internetowej na serwerze Tomcat do chmury Azure Spring Cloud, najpierw przekonwertuj aplikację na mikrousługi chmury Spring Cloud, a następnie postępuj zgodnie z wytycznymi poniżej.
+
+|Lokalizacja docelowa&nbsp;→<br><br>Typ&nbsp;aplikacji&nbsp;↓|Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
 |---|---|---|---|---|---|---|
-| Spring Boot /<br>Aplikacje JAR | [dostępne][5] | planowane        | planowane | planowane | planowane        | planowane |
-| Spring Cloud /<br>mikrousługi   | Nie dotyczy            | Nie dotyczy            | Nie dotyczy     | planowane | planowane        | planowane |
-| Aplikacje internetowe<br>na serwerze Tomcat     | Nie dotyczy            | [dostępne][2] | Nie dotyczy     | Nie dotyczy     | [dostępne][3] | planowane |
+| Spring Boot /<br>Aplikacje JAR | [wytyczne][5] | wytyczne<br>planowane | wytyczne<br>planowane | wytyczne<br>planowane | wytyczne<br>planowane |
+| Spring Cloud /<br>mikrousługi   | Nie dotyczy           | Nie dotyczy                 | wytyczne<br>planowane | wytyczne<br>planowane | wytyczne<br>planowane |
+| Aplikacje internetowe<br>na serwerze Tomcat     | Nie dotyczy           | [wytyczne][2]       | Nie dotyczy                 | [wytyczne][3]       | wytyczne<br>planowane |
 
 **Aplikacje Java EE**
 
 W poniższych wierszach możesz znaleźć typ aplikacji Java EE działającej na określonym serwerze aplikacji. W kolumnach znajdziesz lokalizację docelową usługi platformy Azure, w której będzie hostowana Twoja aplikacja.
 
-|Lokalizacja docelowa&nbsp;→<br><br>Serwer aplikacji&nbsp;↓|Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Aplikacja<br>Usługa<br>WildFly|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
+|Lokalizacja docelowa&nbsp;→<br><br>Serwer aplikacji&nbsp;↓|Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | Nie dotyczy | Nie dotyczy | planowane | Nie dotyczy | planowane | planowane        |
-| WebLogic              | Nie dotyczy | Nie dotyczy | planowane | Nie dotyczy | planowane | [dostępne][4] |
-| WebSphere             | Nie dotyczy | Nie dotyczy | planowane | Nie dotyczy | planowane | planowane        |
-| JBoss EAP             | Nie dotyczy | Nie dotyczy | planowane | Nie dotyczy | Nie dotyczy     | planowane        |
+| WildFly /<br>JBoss AS | Nie dotyczy | Nie dotyczy | Nie dotyczy | wytyczne<br>planowane | wytyczne<br>planowane |
+| WebLogic              | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][6]       | [wytyczne][4]       |
+| WebSphere             | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][7]       | wytyczne<br>planowane |
+| JBoss EAP             | Nie dotyczy | Nie dotyczy | Nie dotyczy | Nie dotyczy                 | wytyczne<br>planowane |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -150,3 +154,5 @@ W poniższych wierszach możesz znaleźć typ aplikacji Java EE działającej na
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
 [4]: migrate-weblogic-to-virtual-machines.md
 [5]: migrate-java-se-to-java-se-app-service.md
+[6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+[7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md

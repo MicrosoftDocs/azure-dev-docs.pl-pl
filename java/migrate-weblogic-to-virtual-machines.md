@@ -5,12 +5,12 @@ author: edburns
 ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
-ms.openlocfilehash: 4abc2383d0ff2e14cf550d96b87c75bfa6fab72e
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 86d1afd365c0c1f9126792d57fbeda3817500735
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77000803"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894158"
 ---
 # <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Migrowanie aplikacji WebLogic do usługi Azure Virtual Machines
 
