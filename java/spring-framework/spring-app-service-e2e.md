@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 4daf41e1cf13d57a42230cd8ed6af4a2258e5e01
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77001083"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139304"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Wdrażanie aplikacji Spring w usłudze App Service za pomocą programu MySQL
 
@@ -115,7 +115,7 @@ export REGION=<region>
 
 Narzędzie Maven będzie używać tych wartości do tworzenia zasobów platformy Azure z podanymi nazwami. Korzystając ze zmiennych środowiskowych, można zachować wpisy tajne konta poza plikami projektu.
 
-Następnie zaktualizuj plik *pom.xml*, aby skonfigurować narzędzie Maven na potrzeby wdrożenia na platformie Azure. Po dodanym wcześniej elemencie `<plugin>` dodaj poniższy kod XML. W razie potrzeby zmień `1.7.0` na bieżącą wersję [wtyczki Maven dla usługi Azure App Service](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Następnie zaktualizuj plik *pom.xml*, aby skonfigurować narzędzie Maven na potrzeby wdrożenia na platformie Azure. Po dodanym wcześniej elemencie `<plugin>` dodaj poniższy kod XML. W razie potrzeby zmień `1.9.0` na bieżącą wersję [wtyczki Maven dla usługi Azure App Service](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
@@ -230,13 +230,13 @@ Następnie zaktualizuj plik *pom.xml*, aby program MySQL stał się aktywną kon
 </profile>
 ```
 
-Następnie zaktualizuj plik *pom.xml*, aby skonfigurować narzędzie Maven na potrzeby wdrożenia na platformie Azure i użycia w programie MySQL. Po dodanym wcześniej elemencie `<plugin>` dodaj poniższy kod XML. W razie potrzeby zmień `1.7.0` na bieżącą wersję [wtyczki Maven dla usługi Azure App Service](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Następnie zaktualizuj plik *pom.xml*, aby skonfigurować narzędzie Maven na potrzeby wdrożenia na platformie Azure i użycia w programie MySQL. Po dodanym wcześniej elemencie `<plugin>` dodaj poniższy kod XML. W razie potrzeby zmień `1.9.0` na bieżącą wersję [wtyczki Maven dla usługi Azure App Service](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.7.0</version>
+    <version>1.9.0</version>
     <configuration>
 
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>

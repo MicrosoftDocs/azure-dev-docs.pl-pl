@@ -9,11 +9,11 @@ ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
 ms.openlocfilehash: 868849e9df89138d943421886961821d4d679db9
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "77000271"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318188"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Uwierzytelnianie za pomocą bibliotek Azure dla języka Java
 
