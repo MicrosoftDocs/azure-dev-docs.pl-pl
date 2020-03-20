@@ -9,12 +9,12 @@ ms.date: 07/17/2019
 ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 12ca26bae42c17395c70448ffc5bf3f01dde9b8e
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 621fa4c79511149ef18a60fd4143490773e49271
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77001090"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79313265"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Wprowadzenie do funkcji Spring Cloud na platformie Azure
 
@@ -64,7 +64,7 @@ Właściwości te należy zmienić na samym początku pliku *pom.xml*:
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <azure.functions.maven.plugin.version>1.4.0</azure.functions.maven.plugin.version>
+    <azure.functions.maven.plugin.version>1.4.1</azure.functions.maven.plugin.version>
     <azure.functions.java.library.version>1.3.0</azure.functions.java.library.version>
     <functionAppName>my-spring-function</functionAppName>
     <functionAppRegion>westus</functionAppRegion>
@@ -326,6 +326,10 @@ Poniżej znajduje się zrzut ekranu przedstawiający żądanie cURL w górnej cz
 ## <a name="deploy-the-function-to-azure-functions"></a>Wdrażanie funkcji w usłudze Azure Functions
 
 Teraz zamierzasz opublikować funkcję platformy Azure w środowisku produkcyjnym. Pamiętaj, że do skonfigurowania funkcji zostaną użyte właściwości `<functionAppName>`, `<functionAppRegion>` i `<functionResourceGroup>` zdefiniowane w pliku *pom.xml*.
+
+> [!NOTE]
+> Wtyczka Maven musi uwierzytelnić się na platformie Azure. Jeśli masz zainstalowany interfejs wiersza polecenia platformy Azure, przed kontynuowaniem użyj polecenia `az login`.
+> Zajrzyj [tutaj](https://github.com/microsoft/azure-maven-plugins/wiki/Authentication), aby uzyskać dostęp do większej liczby opcji uwierzytelniania.
 
 Uruchom narzędzie Maven, aby automatycznie wdrożyć funkcję:
 
