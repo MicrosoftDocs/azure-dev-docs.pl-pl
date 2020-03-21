@@ -1,9 +1,10 @@
-- name: Platforma Azure dla deweloperów języka Java
+- name: Platforma Azure dla deweloperów języka Java w chmurze
   href: index.yml
   items:
     - name: Rozpoczęcie pracy
       href: java-sdk-azure-get-started.md
     - name: Przewodniki Szybki start
+      expanded: true
       items:
         - name: Wdrażanie aplikacji internetowych
           items:
@@ -84,14 +85,12 @@
             - name: Wyszukiwanie obrazów w usłudze Bing
               href: /azure/cognitive-services/bing-image-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
     - name: Struktury i platformy
-      expanded: true
       items:
         - name: Platforma Spring i środowisko Spring Boot
           href: /azure/java/spring-framework/index
         - name: Eclipse MicroProfile
           href: /azure/java/microprofile/index
     - name: Narzędzia deweloperskie
-      expanded: true
       items:
         - name: Omówienie
           href: java-azure-tools.md

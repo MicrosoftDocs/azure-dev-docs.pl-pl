@@ -3,12 +3,6 @@
   items:
     - name: Rozpoczęcie pracy
       href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
-    - name: Samouczki
-      items:
-        - name: Wdrażanie kontenerów na maszynach wirtualnych platformy Azure
-          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
-        - name: Publikowanie aplikacji Spring Boot jako kontenera platformy Docker
-          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
     - name: Instrukcje
       items:
         - name: Instalowanie zestawu narzędzi

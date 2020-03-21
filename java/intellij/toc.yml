@@ -7,10 +7,6 @@
       items:
         - name: Wdrażanie aplikacji internetowej w kontenerze systemu Linux
           href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
-        - name: Publikowanie aplikacji internetowej jako kontenera platformy Docker
-          href: azure-toolkit-for-intellij-publish-as-docker-container.md
-        - name: Publikowanie aplikacji Spring Boot jako kontenera platformy Docker
-          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
     - name: Instrukcje
       items:
         - name: Zaloguj się do swojego konta platformy Azure
