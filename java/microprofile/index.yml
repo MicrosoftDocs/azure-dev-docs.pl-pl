@@ -1,57 +1,44 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Specyfikacja Eclipse MicroProfile na platformie Azure
+### YamlMime:Landing
+title: Dokumentacja projektu Eclipse MicroProfile na platformie Azure
+summary: MicroProfile to projekt organizacji Eclipse Foundation, którego celem jest wykorzystywanie i rozwijanie technologii Java dla przedsiębiorstw, takich jak Java EE, w kierunku rozproszonych architektur mikrousług przez wprowadzanie innowacji w różnych implementacjach i współpracę nad wspólnymi obszarami zainteresowań w celu standaryzacji.
 metadata:
-  document_id: null
-  title: Specyfikacja Eclipse MicroProfile na platformie Azure
-  description: 'Rozpocznij pracę przy użyciu specyfikacji Eclipse MicroProfile, aby tworzyć aplikacje na platformie Azure.'
-  keywords: 'Azure, Java, Maven, MicroProfile, Jakarta EE, Java EE, Eclipse'
+  title: Dokumentacja projektu Eclipse MicroProfile na platformie Azure
+  description: Rozpocznij pracę przy użyciu specyfikacji Eclipse MicroProfile, aby tworzyć aplikacje na platformie Azure.
+  ms.service: azure-java
   author: brborges
   ms.author: brborges
-  manager: brborges
-  ms.date: 02/01/2018
+  ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.devlang: java
-  ms.service: multiple
-  ms.custom: seo-java-july2019
-sections:
-  - items:
-      - type: markdown
-        text: |
-          [MicroProfile](https://microprofile.io/) to projekt organizacji Eclipse Foundation, którego celem jest wykorzystywanie i rozwijanie technologii Java dla przedsiębiorstw, takich jak Java EE, w kierunku rozproszonych architektur mikrousług przez wprowadzanie innowacji w różnych implementacjach i współpracę nad wspólnymi obszarami zainteresowań w celu standaryzacji.
-  - title: Przewodniki Wprowadzenie
-    items:
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/azure/media/index/ContainerInstances.svg'
-            text: Wdrażanie w usłudze Azure Container Instances
-            href: deploy-microprofile-to-container-instances.md
-          - image:
-              src: 'https://docs.microsoft.com/azure/media/index/AppService.svg'
-            text: Wdrażanie w usłudze Azure Web Apps
-            href: deploy-microprofile-to-web-app-for-containers.md
-          - image:
-              src: 'https://docs.microsoft.com/azure/media/index/keyvault.svg'
-            text: Źródło konfiguracji dla usługi Azure Key Vault
-            href: configure-microprofile-with-keyvault.md
-          - image:
-              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopssuite.png'
-            text: Ciągła integracja/ciągłe wdrażanie aplikacji MicroProfile przy użyciu usługi Azure DevOps
-            href: cicd-microprofile-vsts.md
-  - title: Przykłady dla platformy Azure
-    items:
-      - type: list
-        style: unordered
-        className: spaced noBullet
-        items:
-          - html: '<a href="https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue">Przykłady dotyczące specyfikacji MicroProfile dla platformy Azure</a>'
-  - title: Dokumentacja
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: Projekty dotyczące specyfikacji MicroProfile
-            html: '<p><a href="https://microprofile.io/">MicroProfile.io</a></p><p><a href="https://microprofile.io/project/eclipse/microprofile-samples">Przykłady z witryny MicroProfile.io</a></p>'
+  ms.openlocfilehash: 2588c7b2e7346ef1fca8bd79e63fe88a0319590d
+  ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+  ms.translationtype: HT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "79990403"
+landingContent:
+- title: Przewodniki Wprowadzenie
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Wdrażanie w usłudze Azure Container Instances
+      url: deploy-microprofile-to-container-instances.md
+    - text: Wdrażanie w usłudze Azure Web Apps
+      url: deploy-microprofile-to-web-app-for-containers.md
+    - text: Źródło konfiguracji dla usługi Azure Key Vault
+      url: configure-microprofile-with-keyvault.md
+    - text: Ciągła integracja/ciągłe wdrażanie aplikacji MicroProfile przy użyciu usługi Azure DevOps
+      url: cicd-microprofile-vsts.md
+- title: Przykłady kodu
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Przykłady dotyczące projektu MicroProfile dla platformy Azure
+      url: https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue
+    - text: MicroProfile — przykłady
+      url: https://microprofile.io/project/eclipse/microprofile-samples
+- title: MicroProfile — zasoby
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: MicroProfile.io
+      url: https://microprofile.io/
