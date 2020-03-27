@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 910401236cb8435624470013878154fc46566941
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.openlocfilehash: 306a56ad4d74a316eefbb4b9f24cc14fbc5b9644
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "77000278"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990441"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Wprowadzenie do programowania w chmurze przy użyciu języka Java na platformie Azure
 
@@ -37,8 +37,7 @@ Aplikacja języka Java wymaga uprawnień do odczytu i tworzenia w ramach subskry
 * Zawiera małe litery
 * Zawiera wielkie litery
 * Zawiera cyfry
-* Zawiera jeden z następujących symboli: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ‘ , . ? / ` ~ “ ( ) ;
-
+* Zawiera jeden z następujących symboli: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ' , . ? / ` ~ " ( ) ;
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
@@ -205,12 +204,12 @@ public class AzureApp {
 
             // use the properties file with the service principal information to authenticate
             // change the name of the environment variable if you used a different name in the previous step
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));    
+            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
             Azure azure = Azure.configure()
                     .withLogLevel(LogLevel.BASIC)
                     .authenticate(credFile)
                     .withDefaultSubscription();
-           
+
             // create a Ubuntu virtual machine in a new resource group 
             VirtualMachine linuxVM = azure.virtualMachines().define("testLinuxVM")
                     .withRegion(Region.US_EAST)
@@ -223,7 +222,7 @@ public class AzureApp {
                     .withSsh(sshKey)
                     .withUnmanagedDisks()
                     .withSize(VirtualMachineSizeTypes.STANDARD_D3_V2)
-                    .create();   
+                    .create();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -309,7 +308,6 @@ Zastąp bieżącą metodę główną w pliku `AzureApp.java` poniższym kodem, u
 Ten kod tworzy nową bazę danych SQL z regułą zapory zezwalającą na dostęp zdalny, a następnie nawiązuje połączenie z nią przy użyciu sterownika JBDC bazy danych SQL Database. 
 
 ```java
-
     public static void main(String args[])
     {
         // create the db using the management libraries
@@ -369,6 +367,7 @@ Ten kod tworzy nową bazę danych SQL z regułą zapory zezwalającą na dostęp
         }
     }
 ```
+
 Uruchom przykład z wiersza polecenia:
 
 ```shell

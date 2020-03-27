@@ -1,5 +1,5 @@
 ---
-title: Wdrażanie aplikacji internetowej Spring Boot w usłudze Azure App Service dla kontenerów
+title: Wdrażanie aplikacji internetowej Spring Boot w systemie Linux w usłudze Azure App Service
 description: W tym samouczku przedstawiono procedurę wdrażania aplikacji internetowej Spring Boot jako aplikacji internetowej systemu Linux na platformie Microsoft Azure.
 services: azure app service
 documentationcenter: java
@@ -9,14 +9,14 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
-ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
+ms.openlocfilehash: fb8e49ce59c363276a0ed615b3da29ca8d02f09e
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79510615"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990490"
 ---
-# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure App Service dla kontenerów
+# <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Wdrażanie aplikacji Spring Boot w systemie Linux w usłudze Azure App Service
 
 W tym samouczku przedstawiono procedurę konteneryzacji aplikacji [Spring Boot] przy użyciu platformy [Docker] i wdrażania własnego obrazu platformy Docker na hoście z systemem Linux w usłudze [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
@@ -34,46 +34,46 @@ Do wykonania kroków opisanych w tym samouczku wymagane są następujące elemen
 > [!NOTE]
 >
 > Ze względu na wymagania tego samouczka dotyczące wirtualizacji nie można wykonać kroków opisanych w tym artykule na maszynie wirtualnej. Należy użyć komputera fizycznego z włączonymi funkcjami wirtualizacji.
->
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Tworzenie aplikacji internetowej Pierwsze kroki Spring Boot na platformie Docker
 
 Poniżej przedstawiono kroki wymagane do utworzenia prostej aplikacji internetowej Spring Boot i przetestowania jej lokalnie.
 
 1. Otwórz wiersz polecenia i utwórz katalog lokalny, w którym będzie przechowywana aplikacja, a następnie przejdź do tego katalogu, na przykład:
-   ```
-   md C:\SpringBoot
-   cd C:\SpringBoot
-   ```
-   — lub —
-   ```
+
+   ```bash
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
 1. Sklonuj przykładowy projekt [Spring Boot na platformie Docker — wprowadzenie] do utworzonego katalogu, na przykład:
-   ```
+
+   ```bash
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
 1. Zmień katalog na ukończony projekt, na przykład:
-   ```
+
+   ```bash
    cd gs-spring-boot-docker/complete
    ```
 
 1. Skompiluj plik JAR przy użyciu narzędzia Maven, na przykład:
-   ```
+
+   ```bash
    mvn package
    ```
 
 1. Po utworzeniu aplikacji internetowej przejdź do katalogu `target`, w którym znajduje się plik JAR, i uruchom aplikację internetową; na przykład:
-   ```
+
+   ```bash
    cd target
    java -jar gs-spring-boot-docker-0.1.0.jar --server.port=80
    ```
 
 1. Przetestuj aplikację internetową, przechodząc do niej lokalnie przy użyciu przeglądarki internetowej. Jeśli na przykład masz dostęp do narzędzia curl, a serwer Tomcat został skonfigurowany do uruchamiania na porcie 80:
-   ```
+
+   ```bash
    curl http://localhost
    ```
 
@@ -88,14 +88,13 @@ W poniższych krokach objaśniono sposób tworzenia rejestru usługi Azure Conta
 > [!NOTE]
 >
 > Jeśli chcesz użyć interfejsu wiersza polecenia platformy Azure zamiast witryny Azure Portal, wykonaj kroki opisane w artykule [Tworzenie prywatnego rejestru kontenerów platformy Docker za pomocą interfejsu wiersza polecenia platformy Azure w wersji 2.0](/azure/container-registry/container-registry-get-started-azure-cli).
->
 
 1. Przejdź do witryny [Azure Portal] i zaloguj się.
 
    Po zalogowaniu się do konta w witrynie Azure Portal wykonaj kroki opisane w artykule [Tworzenie prywatnego rejestru kontenerów platformy Docker za pomocą witryny Azure Portal], które sparafrazowano poniżej ze względów praktycznych.
 
 1. Kliknij ikonę menu **+ Nowy**, kliknij pozycję **Kontenery**, a następnie kliknij pozycję **Azure Container Registry**.
-   
+
    ![Tworzenie nowego rejestru usługi Azure Container Registry][AR01]
 
 1. Gdy zostanie wyświetlona strona **Tworzenie rejestru kontenerów**, wprowadź odpowiednie wartości w polach **Nazwa rejestru**, **Subskrypcja**, **Grupa zasobów** i **Lokalizacja**. Wybierz pozycję **Włącz** dla opcji **Użytkownik administracyjny**. Następnie kliknij pozycję **Utwórz**.
@@ -122,7 +121,7 @@ W poniższych krokach objaśniono sposób tworzenia rejestru usługi Azure Conta
    </properties>
    ```
 
-1. Dodaj wtyczkę [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) do kolekcji `<plugins>` w pliku *pom.xml*.  W tym przykładzie użyto wersji 1.8.0. 
+1. Dodaj wtyczkę [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) do kolekcji `<plugins>` w pliku *pom.xml*.  W tym przykładzie użyto wersji 1.8.0.
 
    Określ obraz podstawowy w wierszu `<from>/<image>` tutaj `mcr.microsoft.com/java/jre:8-zulu-alpine`. Określ nazwę obrazu końcowego, który ma zostać skompilowany przy użyciu obrazu podstawowego w wierszu `<to>/<image>`.  
 
@@ -152,7 +151,7 @@ W poniższych krokach objaśniono sposób tworzenia rejestru usługi Azure Conta
 
 1. Przejdź do katalogu ukończonego projektu aplikacji Spring Boot i uruchom następujące polecenie, aby ponownie skompilować aplikację i wypchnąć kontener do rejestru usługi Azure Container Registry:
 
-   ```cmd
+   ```bash
    mvn compile jib:build
    ```
 
@@ -198,15 +197,15 @@ W poniższych krokach objaśniono sposób tworzenia rejestru usługi Azure Conta
    * **Obraz**: Wybierz utworzony wcześniej obraz, na przykład: „*gs-spring-boot-docker*”
 
    * **Tag**: Wybierz tag obrazu, na przykład: „*najnowszy*”
-   
+
    * **Polecenie uruchamiania**: Pozostaw to pole puste, ponieważ obraz ma już polecenie uruchamiania
-   
+
    Po wprowadzeniu wszystkich powyższych informacji kliknij przycisk **Przeglądanie + tworzenie**.
 
    ![Konfigurowanie ustawień aplikacji internetowej][LX02-A]
 
    * Kliknij pozycję **Przegląd + utwórz**.
-   
+
 Przejrzyj informacje podsumowujące i kliknij pozycję **Utwórz**.
 
 Po zakończeniu wdrażania kliknij przycisk **Przejdź do zasobu**.  Na stronie wdrożenia zostanie wyświetlony adres URL umożliwiający uzyskanie dostępu do aplikacji.
@@ -218,17 +217,16 @@ Po zakończeniu wdrażania kliknij przycisk **Przejdź do zasobu**.  Na stronie 
 > Platforma Azure będzie automatycznie mapować żądania internetowe na osadzony serwer Tomcat, który działa na porcie 80. Jednak jeśli osadzony serwer Tomcat został skonfigurowany tak, aby był uruchamiany na porcie 8080 lub niestandardowym porcie, należy dodać do aplikacji internetowej zmienną środowiskową, która definiuje port osadzonego serwera Tomcat. Aby to zrobić, wykonaj następujące kroki:
 >
 > 1. Przejdź do witryny [Azure Portal] i zaloguj się.
-> 
+>
 > 2. Kliknij ikonę **Aplikacje internetowe** i wybierz swoją aplikację na stronie **App Services**.
 >
-> 4. Kliknij pozycję **Konfiguracja** na lewym pasku nawigacyjnym.
+> 3. Kliknij pozycję **Konfiguracja** na lewym pasku nawigacyjnym.
 >
-> 5. W sekcji **Ustawienia aplikacji** dodaj nowe ustawienie o nazwie **WEBSITES_PORT** i wprowadź niestandardowy numer portu dla wartości.
+> 4. W sekcji **Ustawienia aplikacji** dodaj nowe ustawienie o nazwie **WEBSITES_PORT** i wprowadź niestandardowy numer portu dla wartości.
 >
-> 6. Kliknij przycisk **OK**. Następnie kliknij przycisk **Save** (Zapisz).
+> 5. Kliknij przycisk **OK**. Następnie kliknij przycisk **Save** (Zapisz).
 >
 > ![Zapisywanie niestandardowego numeru portu w witrynie Azure Portal][LX03]
->
 
 <!--
 ##  OPTIONAL: Configure the embedded Tomcat server to run on a different port
