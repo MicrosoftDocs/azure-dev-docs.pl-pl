@@ -157,6 +157,8 @@
           href: java-sdk-add-certificate-ca-store.md
         - name: Uwierzytelnianie
           href: java-sdk-azure-authenticate.md
+        - name: Konfigurowanie rejestrowania
+          href: java-sdk-azure-log.md
         - name: Migrowanie środowiska Java na platformę Azure
           items:
             - name: Omówienie
