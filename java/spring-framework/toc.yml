@@ -38,6 +38,8 @@
               href: configure-spring-data-jdbc-with-azure-postgresql.md
             - name: Technologia JDBC z usługą Azure SQL Server
               href: configure-spring-data-jdbc-with-azure-sql-server.md
+            - name: Technologia R2DBC z usługą Azure MySQL
+              href: configure-spring-data-r2dbc-with-azure-mysql.md
             - name: Technologia JPA z usługą Azure MySQL
               href: configure-spring-data-jpa-with-azure-mysql.md
             - name: Technologia JPA z usługą Azure PostgreSQL
