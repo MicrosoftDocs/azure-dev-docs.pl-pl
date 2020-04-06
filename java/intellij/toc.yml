@@ -1,8 +1,10 @@
 - name: Zestaw Azure Toolkit for IntelliJ
   href: azure-toolkit-for-intellij.md
   items:
-    - name: Rozpoczęcie pracy
+    - name: Wprowadzenie — aplikacja internetowa
       href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+    - name: Wprowadzenie — funkcje
+      href: azure-toolkit-for-intellij-quickstart-functions.md
     - name: Samouczki
       items:
         - name: Wdrażanie aplikacji internetowej w kontenerze systemu Linux

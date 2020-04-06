@@ -9,12 +9,12 @@ metadata:
   ms.author: brendm
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 4a809a74a252e5e522d5db0fef3d03c140aa5ad0
-  ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+  ms.openlocfilehash: 82a80cae0bff11df5366bcb1be82a956047e0d3e
+  ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
   ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "80063877"
+  ms.lasthandoff: 04/01/2020
+  ms.locfileid: "80537171"
 landingContent:
 - title: Przewodniki Wprowadzenie
   linkLists:
@@ -22,6 +22,8 @@ landingContent:
     links:
     - text: Tworzenie aplikacji internetowej Hello world dla usługi Azure App Service
       url: azure-toolkit-for-intellij-create-hello-world-web-app.md
+    - text: Tworzenie funkcji wyzwalacza HTTP dla usługi Azure Functions
+      url: azure-toolkit-for-intellij-quickstart-functions.md
 - title: Samouczki krok po kroku
   linkLists:
   - linkListType: tutorial
