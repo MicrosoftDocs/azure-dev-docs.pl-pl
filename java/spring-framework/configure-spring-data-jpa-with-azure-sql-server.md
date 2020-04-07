@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: a57fbc5dc8be0848f0b68fd1a45a1478de52b419
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: 180eac30a5aaeb10abe09904c578463bfe5a71da
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "77000677"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537202"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Jak używać interfejsu Spring Data JPA z usługą Azure SQL Database
 
@@ -24,9 +24,9 @@ W tym artykule przedstawiono tworzenie przykładowej aplikacji, która używa ro
 
 Aby wykonać kroki opisane w tym artykule, wymagane są:
 
-* Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
+* Subskrypcja platformy Azure. Jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
 * Obsługiwany zestaw Java Development Kit (JDK). Aby uzyskać więcej informacji na temat zestawów JDK dostępnych do użycia podczas tworzenia aplikacji na platformie Azure, zobacz <https://aka.ms/azure-jdks>.
-* Narzędzie [Apache Maven](http://maven.apache.org/) w wersji 3.0 lub nowszej.
+* Narzędzie [Apache Maven](http://maven.apache.org/), wersja 3.0 lub nowsza.
 * [Curl](https://curl.haxx.se/) lub podobne narzędzie HTTP do testowania funkcjonalności.
 * Klient usługi [Git](https://git-scm.com/downloads).
 
@@ -48,7 +48,7 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
 
    - **Nazwa bazy danych**: wybierz unikatową nazwę bazy danych SQL — zostanie ona utworzona na serwerze SQL, który określisz później.
    - **Subskrypcja**: określ subskrypcję platformy Azure, która ma zostać użyta.
-   - **Grupa zasobów**: określ, czy chcesz utworzyć nową grupę zasobów, czy wybrać istniejącą grupę.
+   - **Grupa zasobów**: określ, czy chcesz utworzyć nową grupę zasobów, lub wybierz istniejącą grupę.
    - **Wybierz źródło**: na potrzeby tego samouczka wybierz `Blank database`, aby utworzyć nową bazę danych.
 
    ![Określanie właściwości bazy danych SQL][SQL02]
@@ -122,7 +122,11 @@ Po utworzeniu bazy danych i serwera SQL można skonfigurować ustawienia zabezpi
 
 1. Zapisz i zamknij plik *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Pakowanie i testowanie aplikacji przykładowej 
+> [!NOTE]
+> Pierwsza właściwość pliku *application.properties* to `spring.jpa.hibernate.ddl-auto=create`, czyli właściwość hibernacji, która automatycznie usuwa i ponownie tworzy schemat bazy danych przy uruchamianiu aplikacji.
+> Ta konfiguracja jest przydatna podczas tworzenia i testowania, ale nie należy jej używać w środowisku produkcyjnym.
+
+## <a name="package-and-test-the-sample-application"></a>Pakowanie i testowanie aplikacji przykładowej
 
 1. Skompiluj aplikację przykładową przy użyciu narzędzia Maven, na przykład:
 
@@ -177,13 +181,13 @@ Aby dowiedzieć się więcej na temat oprogramowania Spring i platformy Azure, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby uzyskać więcej informacji na temat korzystania z platformy Azure z językiem Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] i [Working with Azure DevOps and Java] (Praca z narzędziami Azure DevOps i językiem Java).
+Aby uzyskać więcej informacji na temat korzystania z platformy Azure przy użyciu języka Java, zapoznaj się z tematami [Azure dla deweloperów języka Java] oraz [Praca z narzędziami Azure DevOps i językiem Java].
 
 <!-- URL List -->
 
 [Azure dla deweloperów języka Java]: /azure/java/
 [Bezpłatne konto platformy Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Praca z narzędziami Azure DevOps i językiem Java)
+[Praca z narzędziami Azure DevOps i językiem Java]: /azure/devops/
 [Korzyści dla subskrybentów MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Data]: https://spring.io/projects/spring-data

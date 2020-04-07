@@ -1,5 +1,5 @@
 ---
-title: Wdrażanie aplikacji Spring Boot na platformie Kubernetes
+title: Wdrażanie aplikacji Spring Boot w usłudze Azure Kubernetes Service
 titleSuffix: Azure Kubernetes Service
 description: W tym samouczku przedstawiono procedurę wdrażania aplikacji Spring Boot w klastrze Kubernetes na platformie Microsoft Azure.
 services: container-service
@@ -9,14 +9,14 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: 3e845f9d8a4069225f0f2d949f8a8de492b21771
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: dedd7a8c30e71b1197781838c1006745884eb67d
+ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139253"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80306790"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Wdrażanie aplikacji Spring Boot w klastrze Kubernetes w usłudze Azure Kubernetes Service
+# <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Wdrażanie aplikacji Spring Boot w usłudze Azure Kubernetes Service
 
 **[Kubernetes]** i **[Docker]** to rozwiązania open source, które pomagają deweloperom zautomatyzować wdrażanie i skalowanie aplikacji uruchomionych w kontenerach oraz zarządzanie nimi.
 
@@ -30,6 +30,7 @@ Ten samouczek pomoże Ci połączyć te dwie popularne technologie open source w
 * Narzędzie kompilacji Apache [Maven] (wersja 3).
 * Klient usługi [Usługa Git].
 * Klient platformy [Docker].
+* [Pomocnik poświadczeń platformy Docker usługi ACR](https://github.com/Azure/acr-docker-credential-helper).
 
 > [!NOTE]
 >
@@ -121,8 +122,7 @@ Poniższa procedura przeprowadzi Cię przez proces kompilowania aplikacji intern
       <java.version>1.8</java.version>
    </properties>
    ```
-
-1. Zaktualizuj kolekcję `<plugins>` w pliku *pom.xml* tak, aby właściwość `<plugin>` zawierała pozycję `jib-maven-plugin`.
+1. Zaktualizuj kolekcję `<plugins>` w pliku *pom.xml* tak, aby element `<plugin>` zawierał wpis dla `jib-maven-plugin`, jak pokazano w poniższym przykładzie. Pamiętaj, że korzystamy z obrazu podstawowego z usługi Microsoft Container Registry (MCR): `mcr.microsoft.com/java/jdk:8-zulu-alpine`, który zawiera oficjalnie obsługiwany zestaw JDK dla platformy Azure. Inne obrazy podstawowe usługi MCR z oficjalnie obsługiwanymi zestawami JDK to [Java SE JDK](https://hub.docker.com/_/microsoft-java-jdk), [Java SE JRE](https://hub.docker.com/_/microsoft-java-jre), [Java SE Headless JRE](https://hub.docker.com/_/microsoft-java-jre-headless) i [Java SE JDK and Maven](https://hub.docker.com/_/microsoft-java-maven).
 
    ```xml
    <plugin>
@@ -131,7 +131,7 @@ Poniższa procedura przeprowadzi Cię przez proces kompilowania aplikacji intern
      <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jdk:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>

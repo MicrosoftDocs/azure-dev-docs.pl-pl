@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 162e99db4f079c3e6e3c7a63591632ec9922231d
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422543"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537184"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Jak używać interfejsu Spring Data JPA z usługą Azure PostgreSQL
 
@@ -164,7 +164,11 @@ Aby wykonać kroki opisane w tym artykule, wymagane są:
 
 1. Zapisz i zamknij plik *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Pakowanie i testowanie aplikacji przykładowej 
+> [!NOTE]
+> Pierwsza właściwość pliku *application.properties* to `spring.jpa.hibernate.ddl-auto=create`, czyli właściwość hibernacji, która automatycznie usuwa i ponownie tworzy schemat bazy danych przy uruchamianiu aplikacji.
+> Ta konfiguracja jest przydatna podczas tworzenia i testowania, ale nie należy jej używać w środowisku produkcyjnym.
+
+## <a name="package-and-test-the-sample-application"></a>Pakowanie i testowanie aplikacji przykładowej
 
 1. Skompiluj aplikację przykładową przy użyciu narzędzia Maven, na przykład:
 
