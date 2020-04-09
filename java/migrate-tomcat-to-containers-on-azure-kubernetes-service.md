@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: a27c009fd656ea925f7709908178738eeea8ac0a
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893744"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809207"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrowanie aplikacji serwera Tomcat do kontenerów w usłudze Azure Kubernetes Service
 
@@ -33,7 +33,7 @@ Na potrzeby plików często zapisywanych i odczytywanych przez aplikację (na pr
 
 Aby zidentyfikować używanego menedżera trwałości sesji, sprawdź pliki *context.xml* w aplikacji i konfiguracji serwera Tomcat. Poszukaj elementu `<Manager>`, a następnie zanotuj wartość atrybutu `className`.
 
-Wbudowane na serwerze Tomcat implementacje aplikacji [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), na przykład [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) czy [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), nie są przeznaczone do użycia z rozproszoną, skalowaną platformą, taką jak usługa Kubernetes. Usługa AKS może równoważyć obciążenie między kilkoma zasobnikami i w dowolnym momencie w niewidoczny sposób uruchomić ponownie dowolny zasobnik, więc nie zaleca się utrwalania modyfikowalnego stanu w systemie plików.
+Wbudowane na serwerze Tomcat implementacje aplikacji [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), na przykład [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) czy [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), nie są przeznaczone do użycia z rozproszoną, skalowaną platformą, taką jak usługa Kubernetes. Usługa AKS może równoważyć obciążenie między kilkoma zasobnikami i w dowolnym momencie w niewidoczny sposób uruchomić ponownie dowolny zasobnik, więc nie zaleca się utrwalania modyfikowalnego stanu w systemie plików.
 
 Jeśli jest wymagana trwałość sesji, musisz użyć alternatywnej implementacji aplikacji `PersistentManager`, która będzie zapisywać dane w zewnętrznym magazynie danych, takim jak Pivotal Session Manager z usługą Redis Cache. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi Redis jako pamięci podręcznej sesji na serwerze Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -162,6 +162,8 @@ Przykład:
 </GlobalNamingResources>
 ```
 
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
+
 ### <a name="build-and-push-the-image"></a>Kompilacja i wypychanie obrazu
 
 Najprostszym sposobem kompilowania i przekazywania obrazu do usługi Azure Container Registry (ACR) do użycia przez usługę AKS jest zastosowanie polecenia `az acr build`. To polecenie nie wymaga, aby platforma Docker była zainstalowana na komputerze. Na przykład jeśli masz powyższy plik Dockerfile oraz pakiet aplikacji *petclinic.war* w bieżącym katalogu, możesz utworzyć obraz kontenera w usłudze ACR przy użyciu jednego kroku:
@@ -228,7 +230,7 @@ Aby wykonać zaplanowane zadania w klastrze usługi AKS, zdefiniuj [zadania cron
 
 Po przeprowadzeniu migracji aplikacji do usługi AKS należy sprawdzić, czy działa ona zgodnie z oczekiwaniami. Po wykonaniu tych czynności skorzystaj z naszych zaleceń, które mogą sprawić, że aplikacja będzie bardziej natywna w chmurze.
 
-* Rozważ [dodanie nazwy DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) do adresu IP przydzielonego do kontrolera ruchu przychodzącego lub modułu równoważenia obciążenia aplikacji.
+* Rozważ [dodanie nazwy DNS](/azure/aks/ingress-static-ip#create-an-ingress-controller) do adresu IP przydzielonego do kontrolera ruchu przychodzącego lub modułu równoważenia obciążenia aplikacji.
 
 * Rozważ [dodanie wykresów HELM do aplikacji](https://helm.sh/docs/topics/charts/). Wykres HELM umożliwia parametryzację wdrożenia aplikacji w celu używania i dostosowywania aplikacji przez bardziej różnorodnych klientów.
 

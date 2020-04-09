@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: 9eef2c48b076ae0fc84aea16bb3e5b7bba17d744
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5ba844a66be0eb1acaac2cdf5b132ab422c9a954
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "76999767"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612023"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Tworzenie aplikacji integratora strumienia Spring Cloud przy użyciu usługi Azure Event Hubs
 
@@ -20,9 +20,9 @@ W tym artykule opisano, jak skonfigurować opartą na języku Java aplikację in
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby wykonać czynności opisane w tym artykule, wymagane są:
+Aby wykonać czynności opisane w tym artykule, wymagane są następujące elementy:
 
-* Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz uaktywnić [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
+* Subskrypcja platformy Azure — jeśli nie masz jeszcze subskrypcji platformy Azure, możesz aktywować [korzyści dla subskrybentów MSDN] lub utworzyć [bezpłatne konto platformy Azure].
 * Obsługiwany zestaw Java Development Kit (JDK). Aby uzyskać więcej informacji na temat zestawów JDK dostępnych do użycia podczas tworzenia aplikacji na platformie Azure, zobacz <https://aka.ms/azure-jdks>.
 * Narzędzie [Apache Maven](http://maven.apache.org/) w wersji 3.0 lub nowszej.
 
@@ -43,7 +43,7 @@ Poniższa procedura umożliwia utworzenie centrum zdarzeń platformy Azure.
 
 1. Kliknij pozycję **Utwórz**.
 
-   ![Tworzenie przestrzeni nazw centrum zdarzeń Azure][IMG01]
+   ![Tworzenie przestrzeni nazw centrum Azure Event Hub][IMG01]
 
 1. Na stronie **Tworzenie przestrzeni nazw** wprowadź następujące informacje:
 
@@ -54,17 +54,17 @@ Poniższa procedura umożliwia utworzenie centrum zdarzeń platformy Azure.
    * Określ **lokalizację** dla przestrzeni nazw centrum zdarzeń.
    * Możesz również określić **jednostki przepływności** dla przestrzeni nazw.
 
-   ![Określanie opcji przestrzeni nazw centrum zdarzeń Azure][IMG02]
+   ![Określanie opcji przestrzeni nazw centrum Azure Event Hub][IMG02]
 
 1. Po określeniu opcji wymienionych powyżej kliknij pozycję **Utwórz**, aby utworzyć przestrzeń nazw.
 
-## <a name="create-an-azure-event-hub-in-your-namespace"></a>Tworzenie centrum zdarzeń Azure w przestrzeni nazw
+## <a name="create-an-azure-event-hub-in-your-namespace"></a>Tworzenie centrum Azure Event Hub w przestrzeni nazw
 
 Po wdrożeniu przestrzeni nazw możesz utworzyć w niej centrum zdarzeń.
 
-1. Nawiguj do przestrzeni nazw utworzonej w poprzednim kroku.
+1. Przejdź do przestrzeni nazw utworzonej w poprzednim kroku.
 
-1. Kliknij pozycję **+ Centrum zdarzeń** w górnym pasku menu.
+1. Kliknij pozycję **+ Centrum zdarzeń** na górnym pasku menu.
 
 1. Nazwij centrum zdarzeń.
 
@@ -145,7 +145,7 @@ Poniższa procedura umożliwia utworzenie aplikacji Spring Boot.
 
 1. Otwórz wiersz polecenia.
 
-1. Nawiguj do katalogu *resources* aplikacji Spring Boot. Na przykład:
+1. Przejdź do katalogu *resources* (zasoby) aplikacji Spring Boot. Na przykład:
 
    ```shell
    cd C:\SpringBoot\eventhub\src\main\resources
@@ -187,7 +187,7 @@ Poniższa procedura umożliwia utworzenie aplikacji Spring Boot.
    ]
    ```
    
-1. Określ identyfikator GUID subskrypcji, która ma być używana z platformą Azure. Na przykład:
+1. Określ identyfikator GUID subskrypcji, której chcesz użyć z platformą Azure. Na przykład:
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
@@ -199,7 +199,7 @@ Poniższa procedura umożliwia utworzenie aplikacji Spring Boot.
    az ad sp create-for-rbac --sdk-auth > my.azureauth
    ```
 
-   To polecenie utworzy plik *my.azureauth* w katalogu *resources* z zawartością podobną do podanej w poniższym przykładzie:
+   To polecenie utworzy plik *my.azureauth* w katalogu *resources* (zasoby) z zawartością podobną do podanej w poniższym przykładzie:
 
    ```json
    {
@@ -216,9 +216,9 @@ Poniższa procedura umożliwia utworzenie aplikacji Spring Boot.
    }
    ```
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a>Konfigurowanie aplikacji Spring Boot do korzystania z centrum zdarzeń Azure
+## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a>Konfigurowanie aplikacji Spring Boot w celu używania centrum Azure Event Hub
 
-1. Znajdź plik *application.properties* w katalogu *resources* aplikacji. Na przykład:
+1. Znajdź plik *application.properties* w katalogu *resources* (zasoby) aplikacji. Na przykład:
 
    `C:\SpringBoot\eventhub\src\main\resources\application.properties`
 
@@ -237,30 +237,31 @@ Poniższa procedura umożliwia utworzenie aplikacji Spring Boot.
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
+   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    Gdzie:
 
    |                          Pole                           |                                                                                   Opis                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |        `spring.cloud.azure.credential-file-path`         |                                                    Określa plik poświadczeń Azure utworzony wcześniej w tym samouczku.                                                    |
-   |           `spring.cloud.azure.resource-group`            |                                                      Określa grupę zasobów Azure, która zawiera Twoje centrum zdarzeń Azure.                                                      |
-   |               `spring.cloud.azure.region`                |                                           Określa region geograficzny podany podczas tworzenia konta centrum zdarzeń Azure.                                            |
+   |        `spring.cloud.azure.credential-file-path`         |                                                    Określa plik poświadczeń platformy Azure utworzony wcześniej w tym samouczku.                                                    |
+   |           `spring.cloud.azure.resource-group`            |                                                      Określa grupę zasobów platformy Azure, która zawiera Twoje centrum Azure Event Hub.                                                      |
+   |               `spring.cloud.azure.region`                |                                           Określa region geograficzny podany podczas tworzenia centrum Azure Event Hub.                                            |
    |         `spring.cloud.azure.eventhub.namespace`          |                                          Określa unikatową nazwę podaną podczas tworzenia przestrzeni nazw centrum zdarzeń Azure.                                           |
    | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    Określa konto usługi Azure Storage utworzone wcześniej w tym samouczku.                                                    |
    |     `spring.cloud.stream.bindings.input.destination`     |                            Określa miejsce docelowe elementu wejściowego centrum zdarzeń Azure, którym w tym przypadku jest centrum utworzone wcześniej w tym samouczku.                            |
-   |       `spring.cloud.stream.bindings.input.group `        | Określa grupę odbiorców z centrum zdarzeń Azure, którą można ustawić na „$Default” w celu użycia podstawowej grupy odbiorców utworzonej podczas tworzenia centrum zdarzeń Azure. |
-   |    `spring.cloud.stream.bindings.output.destination`     |                               Określa miejsce docelowe elementu wyjściowego centrum zdarzeń Azure, które w tym samouczku będzie takie samo, jak miejsce docelowe elementu wejściowego.                               |
+   |       `spring.cloud.stream.bindings.input.group `        | Określa grupę odbiorców z centrum Azure Event Hub, dla której można ustawić wartość „$Default” w celu użycia podstawowej grupy odbiorców utworzonej podczas tworzenia centrum Azure Event Hub. |
+   |    `spring.cloud.stream.bindings.output.destination`     |                               Określa miejsce docelowe elementu wyjściowego centrum Azure Event Hub, które w tym samouczku będzie takie samo, jak miejsce docelowe elementu wejściowego.                               |
 
 
 3. Zapisz i zamknij plik *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Dodawanie przykładowego kodu w celu zaimplementowania podstawowej funkcjonalności centrum zdarzeń
 
-W tej sekcji utworzysz niezbędne klasy w języku Java do wysyłania zdarzeń do centrum zdarzeń.
+W tej sekcji utworzysz niezbędne klasy języka Java na potrzeby wysyłania zdarzeń do centrum zdarzeń.
 
 ### <a name="modify-the-main-application-class"></a>Modyfikowanie głównej klasy aplikacji
 
-1. Znajdź główny plik Java aplikacji w katalogu pakietu aplikacji. Na przykład:
+1. Znajdź główny plik Java aplikacji w katalogu pakietów aplikacji, na przykład:
 
    `C:\SpringBoot\eventhub\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java`
 
@@ -268,7 +269,7 @@ W tej sekcji utworzysz niezbędne klasy w języku Java do wysyłania zdarzeń do
 
    `/users/example/home/eventhub/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java`
 
-1. Otwórz główny plik Java aplikacji w edytorze tekstów, a następnie dodaj poniższe wiersze kodu do pliku:
+1. Otwórz główny plik Java aplikacji w edytorze tekstów, a następnie dodaj w nim następujące wiersze:
 
    ```java
    package com.wingtiptoys.eventhub;

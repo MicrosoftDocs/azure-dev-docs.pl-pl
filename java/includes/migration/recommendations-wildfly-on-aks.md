@@ -2,16 +2,16 @@
 author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: e76f43988c408bfd1d2400ef3d28363e7827d0f9
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: ab1cd8d8671b12c44a06ae01268364741f7138f6
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78897661"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80813799"
 ---
 ### <a name="recommendations"></a>Zalecenia
 
-* Rozważ dodanie nazwy DNS do adresu IP przydzielonego do kontrolera ruchu przychodzącego lub modułu równoważenia obciążenia aplikacji. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Konfigurowanie nazwy DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) w temacie [Tworzenie kontrolera ruchu przychodzącego ze statycznym publicznym adresem IP w usłudze AKS](/azure/aks/ingress-static-ip).
+* Rozważ dodanie nazwy DNS do adresu IP przydzielonego do kontrolera ruchu przychodzącego lub modułu równoważenia obciążenia aplikacji. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Konfigurowanie nazwy DNS](/azure/aks/ingress-static-ip#create-an-ingress-controller) w temacie [Tworzenie kontrolera ruchu przychodzącego ze statycznym publicznym adresem IP w usłudze AKS](/azure/aks/ingress-static-ip).
 
 * Rozważ [dodanie do swojej aplikacji elementu chart programu HELM](https://helm.sh/docs/topics/charts/). Wykres HELM umożliwia parametryzację wdrożenia aplikacji w celu używania i dostosowywania aplikacji przez bardziej różnorodnych klientów.
 
