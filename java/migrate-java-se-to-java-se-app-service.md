@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 91292d50f49bde2b76084f8a09119ae74a20f72f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894200"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612111"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Migrowanie wykonywalnych aplikacji internetowych JAR do środowiska Java SE w usłudze Azure App Service
 
@@ -20,8 +20,8 @@ W tym przewodniku opisano, co należy wiedzieć, aby zmigrować istniejącą apl
 
 Jeśli nie można spełnić wymagań wstępnych dla migracji, należy zapoznać się z następującymi przewodnikami dotyczącymi migracji:
 
-* Migrowanie wykonywalnych aplikacji JAR do kontenerów w usłudze Azure Kubernetes Service (zaplanowane)
-* Migrowanie wykonywalnych aplikacji JAR do usługi Azure Virtual Machines (zaplanowane)
+* Migrowanie wykonywalnych aplikacji JAR do kontenerów w usłudze Azure Kubernetes Service (zaplanowane wskazówki)
+* Migrowanie wykonywalnych aplikacji JAR do usługi Azure Virtual Machines (zaplanowane wskazówki)
 
 ## <a name="pre-migration"></a>Czynności przed migracją
 
@@ -39,7 +39,7 @@ Zidentyfikuj zasoby zewnętrzne, takie jak źródła danych, brokery komunikató
 
 W przypadku dowolnej bazy danych SQL zidentyfikuj parametry połączenia.
 
-W przypadku aplikacji Spring Boot parametry połączenia zwykle są widoczne w plikach konfiguracji. 
+W przypadku aplikacji Spring Boot parametry połączenia zwykle są widoczne w plikach konfiguracji.
 
 Oto przykład z pliku *application.properties*:
 
@@ -57,6 +57,8 @@ spring:
     mongodb:
       uri: mongodb://mongouser:deepsecret@mongoserver.contoso.com:27017
 ```
+
+Aby uzyskać więcej informacji, zobacz sekcje [JPA Repositories](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories) (Repozytoria JPA) i [JDBC Repositories](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#jdbc.repositories) (Repozytoria JDBC) w dokumentacji platformy Spring.
 
 #### <a name="jms-message-brokers"></a>Brokery komunikatów JMS
 
@@ -143,7 +145,7 @@ Usługa App Service obsługuje tylko jeden punkt końcowy HTTP na jednym porcie.
 
 ### <a name="parameterize-the-configuration"></a>Parametryzacja konfiguracji
 
-Upewnij się, że wszystkie współrzędne zasobów zewnętrznych (takie jak parametry połączenia bazy danych) i inne dostosowywalne ustawienia mogą być odczytywane ze zmiennych środowiskowych. W przypadku migrowania aplikacji Spring Boot wszystkie ustawienia konfiguracji powinny już być wystąpieniami typu [Externalizable](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config).
+Upewnij się, że wszystkie współrzędne zasobów zewnętrznych (takie jak parametry połączenia bazy danych) i inne dostosowywalne ustawienia mogą być odczytywane ze zmiennych środowiskowych. W przypadku migrowania aplikacji Spring Boot wszystkie ustawienia konfiguracji powinny już być wystąpieniami typu Externalizable. Aby uzyskać więcej informacji, zobacz sekcję [Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config) (Konfiguracja uzewnętrzniona) w dokumentacji środowiska Spring Boot.
 
 Oto przykład, który odwołuje się do zmiennej środowiskowej `SERVICEBUS_CONNECTION_STRING` z pliku *application.properties*:
 

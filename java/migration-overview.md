@@ -5,16 +5,21 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.openlocfilehash: e6215502b54bedf62f40a024f9e7b3acc01cdc1f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79089950"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612011"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrowanie aplikacji Java na platformę Azure
 
 W tym temacie omówiono zalecane strategie migracji aplikacji Java na platformę Azure.
+
+Te wskazówki dotyczące migracji opracowano w celu omówienia typowych scenariuszy z użyciem języka Java na platformie Azure i zapewnienia ogólnych sugestii dotyczących planowania. Jeśli chcesz omówić konkretny scenariusz migracji aplikacji Java z zespołem Microsoft Java on Azure, wypełnij poniższy formularz, a skontaktuje się z Tobą przedstawiciel.
+
+> [!div class="nextstepaction"]
+> [Kwestionariusz migracji ze środowiska Java](https://aka.ms/migrate-my-Java-app-requested-thru-docs)
 
 ## <a name="identifying-application-type"></a>Identyfikowanie typu aplikacji
 
@@ -143,10 +148,10 @@ W poniższych wierszach możesz znaleźć typ aplikacji Java EE działającej na
 
 |Lokalizacja docelowa&nbsp;→<br><br>Serwer aplikacji&nbsp;↓|Aplikacja<br>Usługa<br>Java SE|Aplikacja<br>Usługa<br>Tomcat|Azure<br>Spring<br>Chmurowa|AKS|Maszyny wirtualne|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | Nie dotyczy | Nie dotyczy | Nie dotyczy | wytyczne<br>planowane | wytyczne<br>planowane |
-| WebLogic              | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][6]       | [wytyczne][4]       |
-| WebSphere             | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][7]       | wytyczne<br>planowane |
-| JBoss EAP             | Nie dotyczy | Nie dotyczy | Nie dotyczy | Nie dotyczy                 | wytyczne<br>planowane |
+| WildFly /<br>JBoss AS | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][9] | wytyczne<br>planowane |
+| WebLogic              | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][6] | [wytyczne][4]       |
+| WebSphere             | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][7] | wytyczne<br>planowane |
+| JBoss EAP             | Nie dotyczy | Nie dotyczy | Nie dotyczy | [wytyczne][8] | wytyczne<br>planowane |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -156,3 +161,5 @@ W poniższych wierszach możesz znaleźć typ aplikacji Java EE działającej na
 [5]: migrate-java-se-to-java-se-app-service.md
 [6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
 [7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+[8]: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md
+[9]: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md

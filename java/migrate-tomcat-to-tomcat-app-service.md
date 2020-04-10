@@ -5,23 +5,23 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 6e14e8a18f87b67eb0ecb5ce08541058a964c988
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893758"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612100"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrowanie aplikacji serwera Tomcat do serwera Tomcat w usłudze Azure App Service
 
-W tym przewodniku opisano, na co należy zwrócić uwagę, aby przeprowadzić migrację istniejącej aplikacji serwera Tomcat w celu uruchomienia jej w usłudze Azure App Service przy użyciu serwera Tomcat 8.5 lub 9.0.
+W tym przewodniku opisano, na co należy zwrócić uwagę, aby przeprowadzić migrację istniejącej aplikacji serwera Tomcat w celu uruchomienia jej w usłudze Azure App Service przy użyciu serwera Tomcat 9.0.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
 Jeśli nie można spełnić wymagań wstępnych dla migracji, należy zapoznać się z następującymi przewodnikami dotyczącymi migracji:
 
 * [Migrowanie aplikacji serwera Tomcat do kontenerów w usłudze Azure Kubernetes Service](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Migrowanie aplikacji serwera Tomcat do usługi Azure Virtual Machines (zaplanowane)
+* Migrowanie aplikacji serwera Tomcat do usługi Azure Virtual Machines (zaplanowane wskazówki)
 
 ## <a name="pre-migration"></a>Czynności przed migracją
 
@@ -37,7 +37,7 @@ Aby uzyskać informacje na temat bieżącej wersji serwera Tomcat, zaloguj się 
 ${CATALINA_HOME}/bin/version.sh
 ```
 
-Aby uzyskać informacje na temat bieżącej wersji używanej przez usługę Azure App Service, pobierz oprogramowanie [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi#8.5.50) lub [Tomcat 9](https://tomcat.apache.org/download-90.cgi), w zależności od wersji, która ma być używana w usłudze Azure App Service.
+Aby uzyskać informacje na temat bieżącej wersji używanej przez usługę Azure App Service, pobierz oprogramowanie [Tomcat 9](https://tomcat.apache.org/download-90.cgi), w zależności od wersji, która ma być używana w usłudze Azure App Service.
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -56,7 +56,7 @@ Na potrzeby plików często zapisywanych i odczytywanych przez aplikację (na pr
 
 Aby zidentyfikować używanego menedżera trwałości sesji, sprawdź pliki *context.xml* w aplikacji i konfiguracji serwera Tomcat. Poszukaj elementu `<Manager>`, a następnie zanotuj wartość atrybutu `className`.
 
-Wbudowane na serwerze Tomcat implementacje aplikacji [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), na przykład [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) czy [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), nie są przeznaczone do użycia z rozproszoną, skalowaną platformą, taką jak usługa App Service. Ponieważ usługa App Service może równoważyć obciążenie między kilkoma wystąpieniami i w dowolnym momencie w niewidoczny sposób uruchomić ponownie dowolne wystąpienie, nie zaleca się utrwalania modyfikowalnego stanu w systemie plików.
+Wbudowane na serwerze Tomcat implementacje aplikacji [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), na przykład [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) czy [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), nie są przeznaczone do użycia z rozproszoną, skalowaną platformą, taką jak usługa App Service. Ponieważ usługa App Service może równoważyć obciążenie między kilkoma wystąpieniami i w dowolnym momencie w niewidoczny sposób uruchomić ponownie dowolne wystąpienie, nie zaleca się utrwalania modyfikowalnego stanu w systemie plików.
 
 Jeśli jest wymagana trwałość sesji, musisz użyć alternatywnej implementacji aplikacji `PersistentManager`, która będzie zapisywać dane w zewnętrznym magazynie danych, takim jak Pivotal Session Manager z usługą Redis Cache. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi Redis jako pamięci podręcznej sesji na serwerze Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -76,7 +76,7 @@ Jeśli aplikacja zawiera dowolny kod z zależnościami w systemie operacyjnym ho
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Określanie, czy jest używane klastrowanie serwera Tomcat
 
-Usługa Azure App Service nie obsługuje [klastrowania serwera Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/cluster-howto.html). W zamian można skonfigurować skalowanie i równoważenie obciążenia oraz zarządzać nimi za pośrednictwem usługi Azure App Service bez funkcji specyficznych dla serwera Tomcat. Stan sesji można utrwalić w innej lokalizacji, aby udostępnić ją w replikach. Aby uzyskać więcej informacji, zobacz [Określanie mechanizmu trwałości sesji](#identify-session-persistence-mechanism).
+Usługa Azure App Service nie obsługuje [klastrowania serwera Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html). W zamian można skonfigurować skalowanie i równoważenie obciążenia oraz zarządzać nimi za pośrednictwem usługi Azure App Service bez funkcji specyficznych dla serwera Tomcat. Stan sesji można utrwalić w innej lokalizacji, aby udostępnić ją w replikach. Aby uzyskać więcej informacji, zobacz [Określanie mechanizmu trwałości sesji](#identify-session-persistence-mechanism).
 
 Aby ustalić, czy aplikacja używa klastrowania, poszukaj elementu `<Cluster>` wewnątrz elementów `<Host>` lub `<Engine>` w pliku *server.xml*.
 
@@ -92,17 +92,17 @@ Aby zidentyfikować łączniki HTTP używane przez aplikację, poszukaj element�
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>Określanie, czy jest używana klasa MemoryRealm
 
-Klasa [MemoryRealm](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/realm/MemoryRealm.html) wymaga utrwalonego pliku XML. W usłudze Azure AppService musisz przekazać ten plik do katalogu */home* lub jego podkatalogu bądź do zainstalowanego magazynu. Musisz odpowiednio zmodyfikować parametr `pathName`.
+Klasa [MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) wymaga utrwalonego pliku XML. W usłudze Azure AppService musisz przekazać ten plik do katalogu */home* lub jego podkatalogu bądź do zainstalowanego magazynu. Musisz odpowiednio zmodyfikować parametr `pathName`.
 
 Aby ustalić, czy klasa `MemoryRealm` jest aktualnie używana, sprawdź, czy w plikach *server.xml* i *context.xml* znajdują się elementy `<Realm>`, których atrybut `className` jest ustawiony na `org.apache.catalina.realm.MemoryRealm`.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>Określanie, czy jest używane śledzenie sesji SSL
 
-Usługa App Service wykonuje odciążanie sesji poza środowiskiem uruchomieniowym serwera Tomcat. W związku z tym nie możesz używać [śledzenia sesji SSL](https://tomcat.apache.org/tomcat-8.5-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). W zamian użyj innego trybu śledzenia sesji (`COOKIE` lub `URL`). Jeśli potrzebujesz śledzenia sesji SSL, nie używaj usługi App Service.
+Usługa App Service wykonuje odciążanie sesji poza środowiskiem uruchomieniowym serwera Tomcat. W związku z tym nie możesz używać [śledzenia sesji SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). W zamian użyj innego trybu śledzenia sesji (`COOKIE` lub `URL`). Jeśli potrzebujesz śledzenia sesji SSL, nie używaj usługi App Service.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>Określanie, czy jest używana klasa AccessLogValve
 
-Jeśli używasz klasy [AccessLogValve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/AccessLogValve.html), musisz ustawić parametr `directory` na `/home/LogFiles` lub jego podkatalog.
+Jeśli używasz klasy [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), musisz ustawić parametr `directory` na `/home/LogFiles` lub jego podkatalog.
 
 ## <a name="migration"></a>Migracja
 
@@ -180,7 +180,9 @@ Do przechowywania wszelkich wpisów tajnych specyficznych dla aplikacji użyj us
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>Migracja źródeł danych, bibliotek i zasobów JNDI
 
-Wykonaj [poniższe czynności, aby przeprowadzić migrację źródeł danych](/azure/app-service/containers/configure-language-java#tomcat).
+Aby poznać kroki konfiguracji źródła danych, zapoznaj się z sekcją [Źródła danych](/azure/app-service/containers/configure-language-java#data-sources) artykułu [Konfigurowanie aplikacji Java systemu Linux dla usługi Azure App Service](/azure/app-service/containers/configure-language-java).
+
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
 
 Przeprowadź migrację wszelkich dodatkowych zależności ścieżki klasy na poziomie serwera, wykonując [te same czynności co w przypadku plików JAR źródła danych](/azure/app-service/containers/configure-language-java#finalize-configuration).
 
@@ -193,7 +195,7 @@ Przeprowadź migrację wszelkich dodatkowych [udostępnionych zasobów JDNI na p
 
 Po ukończeniu poprzedniej sekcji w katalogu */home/tomcat/conf* powinna znajdować się dostosowywalna konfiguracja serwera.
 
-Przeprowadź migrację, kopiując wszelkie dodatkowe konfiguracje (na przykład [obszary](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html), [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html))
+Przeprowadź migrację, kopiując wszelkie dodatkowe konfiguracje (na przykład [obszary](https://tomcat.apache.org/tomcat-9.0-doc/config/realm.html) i [JASPIC](https://tomcat.apache.org/tomcat-9.0-doc/config/jaspic.html))
 
 [!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 

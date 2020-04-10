@@ -2,12 +2,12 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
-ms.openlocfilehash: affabacec95b8f1c4c7ea654ff9a765056220c76
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 4b5b73eee66c4a5c9eb28b79804e0dc610f639d6
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "77000866"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612087"
 ---
 ### <a name="inventory-external-resources"></a>Utworzenie spisu zasobów zewnętrznych
 
@@ -32,6 +32,8 @@ W plikach *server.xml* zasoby JNDI będą opisywane przez elementy `<Resource>` 
 * Jaka jest nazwa źródła danych?
 * Jaka jest konfiguracja puli połączeń?
 * Gdzie mogę znaleźć plik JAR sterownika JDBC?
+
+Aby uzyskać więcej informacji, zobacz przewodnik [JNDI Datasource How-To](https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html) (Źródło danych JNDI — porady) w dokumentacji serwera Tomcat.
 
 #### <a name="all-other-external-resources"></a>Wszystkie inne zasoby zewnętrzne
 
