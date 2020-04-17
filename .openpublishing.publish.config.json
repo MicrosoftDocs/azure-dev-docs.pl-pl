@@ -86,7 +86,10 @@
     }
   ],
   "notification_subscribers": [
-    "alachary@microsoft.com"
+    "brendm@microsoft.com",
+    "karler@microsoft.com",
+    "kraigb@microsoft.com",
+    "barbkess@microsoft.com"
   ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
@@ -118,5 +121,8 @@
   ],
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
-  "targets": {}
+  "targets": {},
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
