@@ -1,5 +1,5 @@
 ---
-title: Konfigurowanie aplikacji Spring Boot Initializer do korzystania z szablonu startowego Azure Application Insights SpringBoot
+title: Konfigurowanie aplikacji inicjatora dla programu Spring Boot Starter — Azure Monitor
 description: Konfigurowanie aplikacji Spring Boot utworzonej za pomocą narzędzia Spring Initializr do używania szablonu startowego Application Insights Spring Boot.
 services: Application-Insights
 documentationcenter: java
@@ -9,12 +9,12 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 083abdf87d2298c99b9898db3b17e1c0e5e64bd8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 39993902ba01fd92bf44c6ccb85016ef9e73ac97
+ms.sourcegitcommit: 8aac5c35fbbd3d954bc4963933f96c93e10623d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "76999844"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81119535"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Konfigurowanie aplikacji Spring Boot Initializer do korzystania z Application Insights
 
@@ -273,7 +273,7 @@ Aby dowiedzieć się więcej na temat oprogramowania Spring i platformy Azure, p
 
 Aby uzyskać więcej informacji o korzystaniu z aplikacji Spring Boot na platformie Azure, zobacz następujące artykuły:
 
-* [Deploy a Spring Boot Application to the Azure App Service](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md) (Wdrażanie aplikacji Spring Boot w usłudze Azure App Service)
+* [Wdrażanie aplikacji Spring Boot w usłudze Azure App Service](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service](deploy-spring-boot-java-app-on-kubernetes.md) (Uruchamianie aplikacji Spring Boot w klastrze Kubernetes w usłudze Azure Container Service)
 
@@ -285,7 +285,7 @@ Aby uzyskać więcej informacji na temat dodatkowych szczegółów konfiguracji 
 
 Żądania dotyczące funkcji i potencjalnych usterek można otwierać w repozytorium [ GitHub](https://github.com/Microsoft/ApplicationInsights-Java/issues).
 
-Aby uzyskać więcej informacji na temat używania Azure z językiem Java, zobacz witryny [Azure dla deweloperów języka Java] oraz [Working with Azure DevOps and Java] (Praca z narzędziami Azure DevOps i językiem Java).
+Aby uzyskać więcej informacji na temat używania Azure z językiem Java, zobacz witryny [Azure dla deweloperów języka Java] oraz [Praca z narzędziami Azure DevOps i językiem Java] (Praca z narzędziami Azure DevOps i językiem Java).
 
 **[Platforma Spring]** jest rozwiązaniem open-source, które pomaga deweloperom języka Java tworzyć aplikacje na poziomie przedsiębiorstwa. Jednym z bardziej popularnych projektów opartych na tej platformie jest [Spring Boot], który oferuje uproszczoną metodę tworzenia autonomicznych aplikacji Java. Aby ułatwić deweloperom rozpoczęcie pracy z aplikacją Spring Boot, pod adresem [https://github.com/spring-guides/](https://github.com/spring-guides/) udostępniono przykładowe pakiety aplikacji Spring Boot. Oprócz możliwości wyboru z listy podstawowych projektów Spring Boot narzędzie **[Spring Initializr]** pomaga deweloperom rozpocząć tworzenie niestandardowych aplikacji Spring Boot.
 
@@ -293,7 +293,7 @@ Aby uzyskać więcej informacji na temat używania Azure z językiem Java, zobac
 
 [Azure dla deweloperów języka Java]: /azure/java/
 [Bezpłatne konto platformy Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Praca z narzędziami Azure DevOps i językiem Java)
+[Praca z narzędziami Azure DevOps i językiem Java]: /azure/devops/
 [Korzyści dla subskrybentów MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Właściwości specyficzne dla profilu Spring Boot]: https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-profile-specific-properties
