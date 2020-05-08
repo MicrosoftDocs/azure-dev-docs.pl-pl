@@ -10,9 +10,7 @@
           "**/obj/**",
           "**/includes/**",
           "**/_themes/**",
-          "_themes.pdf/**",
           "**/docfx.json",
-          "_repo.en-us/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
@@ -44,6 +42,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/azure/developer/breadcrumb/toc.json",
+      "uhfHeaderId": "azure",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/azure-dev-docs.pl-pl",
@@ -93,8 +92,8 @@
         "**/*.md": "barbkess",
         "**/*.yml": "barbkess",
         "java/**/*.md": "brendm",
-	
-	"go/**/*.md": "barbkess",
+        "java/**/*.md": "brendm",
+        "go/**/*.md": "barbkess",
         "python/**/*.md": "kraigb",
         "ansible/**/*.md": "tarcher",
         "chef/**/*.md": "tarcher",
