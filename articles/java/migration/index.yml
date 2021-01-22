@@ -1,0 +1,75 @@
+### YamlMime:Landing
+title: Dokumentacja strategii migracji w języku Java do platformy Azure
+summary: Zalecane strategie migracji aplikacji Java na platformę Azure.
+metadata:
+  title: Dokumentacja dotycząca wskazówek dotyczących migracji w języku Java do platformy Azure
+  description: Odkryj zalecane strategie migracji dla migracji w języku Java. Łatwo przenoś aplikacje Java, Tomcat, WildFly, WebSphere, JBoss i WebLogic na platformę Azure.
+  keywords: migration strategies, migration strategy, java migration
+  author: KarlErickson
+  ms.author: karler
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.custom: seo-azure-migrate
+  ms.openlocfilehash: bad5b58f60c28fcab91cbb7326740cfe625705e9
+  ms.sourcegitcommit: 4036ac08edd7fc6edf8d11527444061b0e4531ef
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "98669383"
+landingContent:
+- title: Migrowanie aplikacji Java na platformę Azure
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Omówienie migracji
+      url: migration-overview.md
+- title: Migrowanie sprężyny do platformy Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z platformy Spring Boot do usługi Azure App Service
+      url: migrate-spring-boot-to-app-service.md
+    - text: Przechodzenie z platformy Spring Boot do usługi AKS
+      url: migrate-spring-boot-to-azure-kubernetes-service.md
+    - text: Przechodzenie z platformy Spring Cloud do usługi Azure Spring Cloud
+      url: migrate-spring-cloud-to-azure-spring-cloud.md
+- title: Migrowanie Tomcat na platformę Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z oprogramowania Tomcat do usługi Azure App Service
+      url: migrate-tomcat-to-tomcat-app-service.md
+    - text: Przechodzenie z oprogramowania Tomcat do kontenerów w usłudze AKS
+      url: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+    - text: Przechodzenie z oprogramowania Tomcat do usługi Azure Spring Cloud
+      url: migrate-tomcat-to-azure-spring-cloud.md
+- title: Migrowanie oprogramowania WebLogic na platformę Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z oprogramowania WebLogic do serwera WildFly w usłudze AKS
+      url: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+    - text: Przechodzenie z oprogramowania WebLogic do usługi Azure Virtual Machines
+      url: migrate-weblogic-to-virtual-machines.md
+    - text: Korzystanie z oprogramowania WebLogic z usługą AAD za pośrednictwem protokołu LDAP
+      url: migrate-weblogic-with-aad-ldap.md
+    - text: Korzystanie z oprogramowania WebLogic z usługą App Gateway
+      url: migrate-weblogic-with-app-gateway.md
+- title: Migrowanie WildFly na platformę Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z oprogramowania WildFly do serwera WildFly w usłudze AKS
+      url: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+- title: Migrowanie WebSphere na platformę Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z oprogramowania WebSphere do serwera WildFly w usłudze AKS
+      url: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+- title: Migrowanie JBoss EAP na platformę Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Przechodzenie z oprogramowania JBoss EAP do serwera WildFly w usłudze AKS
+      url: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md

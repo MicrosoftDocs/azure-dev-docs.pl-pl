@@ -1,0 +1,99 @@
+- name: Wiosenna dokumentacja platformy Azure
+  href: index.yml
+  items:
+    - name: Przewodniki Wprowadzenie
+      expanded: true
+      items:
+        - name: Spring Boot
+          href: spring-boot-starters-for-azure.md
+          expanded: true
+          items:
+            - name: Azure Storage
+              href: configure-spring-boot-starter-java-app-with-azure-storage.md
+            - name: Azure Key Vault
+              href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+            - name: Azure Service Bus
+              href: configure-spring-boot-starter-java-app-with-azure-service-bus.md
+        - name: Spring Data
+          expanded: true
+          items:
+            - name: Przewodnik dla deweloperów dotyczący usługi Azure Cosmos DB
+              href: how-to-guides-spring-data-cosmosdb.md
+            - name: Azure Cosmos DB Starter
+              href: configure-spring-boot-starter-java-app-with-cosmos-db.md
+            - name: Usługa Azure Cosmos DB z usługą App Service w systemie Linux
+              href: configure-spring-app-with-cosmos-db-on-app-service-linux.md
+            - name: Interfejs API Apache Cassandra w usłudze Azure Cosmos DB
+              href: configure-spring-data-apache-cassandra-with-cosmos-db.md
+            - name: Interfejs API środowiska Gremlin w usłudze Azure Cosmos DB
+              href: configure-spring-data-gremlin-java-app-with-cosmos-db.md
+            - name: Interfejs API bazy danych MongoDB w usłudze Azure Cosmos DB
+              href: configure-spring-data-mongodb-with-cosmos-db.md
+            - name: Technologia JDBC z usługą Azure MySQL
+              href: configure-spring-data-jdbc-with-azure-mysql.md
+            - name: Technologia JDBC z usługą Azure PostgreSQL
+              href: configure-spring-data-jdbc-with-azure-postgresql.md
+            - name: Technologia JDBC z usługą Azure SQL Server
+              href: configure-spring-data-jdbc-with-azure-sql-server.md
+            - name: R2DBC z usługą Azure MySQL
+              href: configure-spring-data-r2dbc-with-azure-mysql.md
+            - name: R2DBC z usługą Azure PostgreSQL
+              href: configure-spring-data-r2dbc-with-azure-postgresql.md
+            - name: R2DBC z Azure SQL Database
+              href: configure-spring-data-r2dbc-with-azure-sql-server.md
+            - name: Technologia JPA z usługą Azure MySQL
+              href: configure-spring-data-jpa-with-azure-mysql.md
+            - name: Technologia JPA z usługą Azure PostgreSQL
+              href: configure-spring-data-jpa-with-azure-postgresql.md
+            - name: Technologia JPA z usługą Azure SQL Server
+              href: configure-spring-data-jpa-with-azure-sql-server.md
+        - name: Spring Security
+          expanded: true
+          items:
+            - name: Azure Active Directory
+              href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+            - name: Azure Active Directory B2C
+              href: configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc.md
+        - name: Spring Cloud
+          expanded: true
+          items:
+            - name: Centrum zdarzeń Azure
+              href: configure-spring-cloud-stream-binder-java-app-azure-event-hub.md
+            - name: Interfejs API platformy Kafka w usłudze Azure Event Hub
+              href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
+            - name: Azure Functions
+              href: getting-started-with-spring-cloud-function-in-azure.md
+            - name: Usługa Azure Service Bus
+              href: configure-spring-cloud-stream-binder-java-app-with-service-bus.md
+    - name: Samouczki
+      items:
+        - name: Wdrażanie w usłudze App Service za pomocą oprogramowania Maven
+          href: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
+        - name: Wdrażanie na platformie Kubernetes
+          href: deploy-spring-boot-java-app-on-kubernetes.md
+        - name: Wdrażanie w usłudze Web App for Containers
+          href: deploy-spring-boot-java-app-on-linux.md
+        - name: Azure Redis Cache
+          href: configure-spring-boot-initializer-java-app-with-redis-cache.md
+        - name: Kompleksowa usługa App Service z oprogramowaniem MySQL
+          href: spring-app-service-e2e.md
+    - name: Samples
+      items:
+        - name: Lista czynności do wykonania dla usługi Cosmos DB
+          href: 'https://github.com/Microsoft/todo-app-java-on-azure/'
+        - name: Lista czynności do wykonania dla oprogramowania MySQL
+          href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
+        - name: Spring Initializr
+          href: 'https://start.spring.io/'
+    - name: Odwołanie
+      items:
+        - name: Platforma Spring
+          href: 'https://spring.io/'
+        - name: Informacje o platformie Spring
+          href: 'https://spring.io/guides'
+        - name: Spring Boot
+          href: 'https://projects.spring.io/spring-boot/'
+        - name: Odwołania do projektów platformy Spring
+          href: 'https://spring.io/projects'
+        - name: Programy Spring Boot Starter dla platformy Azure
+          href: 'https://github.com/Microsoft/azure-spring-boot/'

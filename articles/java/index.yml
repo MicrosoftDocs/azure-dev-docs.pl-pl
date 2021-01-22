@@ -1,0 +1,188 @@
+### YamlMime:Hub
+title: Dokumentacja dla deweloperów platformy Azure dla języka Java
+summary: Zacznij opracowywać aplikacje dla chmury, korzystając z tych samouczków i narzędzi dla deweloperów języka Java.
+brand: azure
+metadata:
+  title: Dokumentacja dla deweloperów platformy Azure dla języka Java
+  description: Zacznij opracowywać aplikacje dla chmury, korzystając z tych samouczków i narzędzi dla deweloperów języka Java.
+  ms.topic: hub-page
+  ms.date: 04/08/2020
+  ms.openlocfilehash: 94ea0c2dd3b11651cc30bce84bc3b26f7f12cc7a
+  ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/16/2020
+  ms.locfileid: "98669428"
+conceptualContent:
+  items:
+  - title: Przewodnik Szybki Start platformy Azure dla języka Java
+    links:
+    - text: Wdrażanie aplikacji sieci Web Java SE w systemie Linux
+      itemType: quickstart
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
+    - text: Tworzenie funkcji bezserwerowej
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-java-maven
+    - text: Zarządzanie obiektami blob magazynu
+      itemType: quickstart
+      url: /azure/storage/blobs/storage-quickstart-blobs-java
+    footerLink:
+      text: Zobacz więcej
+      url: quickstarts/index.yml
+  - title: Narzędzia, środowisk IDE i obsługiwane zestawy JDK
+    links:
+    - text: Obsługa długoterminowa Java
+      itemType: get-started
+      url: fundamentals/java-jdk-long-term-support.md
+    - text: Instalacja środowiska Java JDK
+      itemType: get-started
+      url: fundamentals/java-jdk-install.md
+    - text: Obrazy platformy Docker ze środowiskiem Java dla platformy Azure
+      itemType: get-started
+      url: fundamentals/java-jdk-docker-images.md
+    footerLink:
+      text: Zobacz więcej
+      url: fundamentals/index.yml
+  - title: Migracja na platformę Azure
+    links:
+    - text: Przechodzenie z platformy Spring do usługi Azure App Service
+      itemType: how-to-guide
+      url: migration/migrate-spring-boot-to-app-service.md
+    - text: Przechodzenie z oprogramowania Tomcat do usługi Azure App Service
+      itemType: how-to-guide
+      url: migration/migrate-tomcat-to-tomcat-app-service.md
+    - text: Przechodzenie z oprogramowania WebLogic do usługi Azure Virtual Machines
+      itemType: how-to-guide
+      url: migration/migrate-weblogic-to-virtual-machines.md
+    footerLink:
+      text: Zobacz więcej
+      url: migration/index.yml
+  - title: Zestaw Azure SDK dla języka Java
+    links:
+    - text: Programowanie na platformie Azure przy użyciu języka Java
+      itemType: get-started
+      url: sdk/java-sdk-azure-get-started.md
+    - text: Wzorce i najlepsze rozwiązania
+      itemType: learn
+      url: sdk/java-sdk-azure-concepts.md
+    - text: Przeglądarka interfejsu API języka Java
+      itemType: reference
+      url: /java/api/?view=azure-java
+    footerLink:
+      text: Zobacz więcej
+      url: sdk/index.yml
+  - title: Azure App Service
+    links:
+    - text: Tworzenie aplikacji w języku Java
+      itemType: quickstart
+      url: /azure/app-service/containers/quickstart-java
+    - text: Konfigurowanie środowiska Java
+      itemType: how-to-guide
+      url: /azure/app-service/containers/configure-language-java
+    - text: Wdrażanie aplikacji wiosennej za pomocą programu MySQL
+      itemType: tutorial
+      url: ./spring-framework/spring-app-service-e2e.md
+    footerLink:
+      text: Zobacz dokumentację App Service
+      url: /azure/app-service/containers/
+  - title: Chmura ze sprężyną Azure
+    links:
+    - text: Co to jest usługa Azure Spring Cloud?
+      itemType: overview
+      url: /azure/spring-cloud/spring-cloud-overview
+    - text: Uruchamianie aplikacji sprężynowej przy użyciu interfejsu wiersza polecenia platformy Azure
+      itemType: quickstart
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - text: Przygotowywanie aplikacji sprężynowej do wdrożenia
+      itemType: tutorial
+      url: /azure/spring-cloud/spring-cloud-tutorial-prepare-app-deployment
+    footerLink:
+      text: Zobacz więcej
+      url: /azure/spring-cloud
+  - title: Integracja z platformą Azure
+    links:
+    - text: Sprężynowe uruchomienia rozruchowe
+      itemType: get-started
+      url: spring-framework/spring-boot-starters-for-azure.md
+    - text: Azure Cosmos DB danych wiosennych
+      itemType: how-to-guide
+      url: spring-framework/how-to-guides-spring-data-cosmosdb.md
+    - text: Wdrażanie aplikacji z rozruchem wiosny
+      itemType: tutorial
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
+    footerLink:
+      text: Zobacz więcej
+      url: spring-framework/index.yml
+  - title: Azure Functions
+    links:
+    - text: Tworzenie funkcji platformy Azure
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
+    - text: Tworzenie funkcji chmury Wiosnowej
+      itemType: tutorial
+      url: ./spring-framework/getting-started-with-spring-cloud-function-in-azure.md
+    - text: Przewodnik dla deweloperów
+      itemType: reference
+      url: /azure/azure-functions/functions-reference-java
+    footerLink:
+      text: Zobacz dokumentację Azure Functions
+      url: /azure/azure-functions
+  - title: Monitorowanie aplikacji Java
+    links:
+    - text: Wprowadzenie do Application Insights
+      itemType: how-to-guide
+      url: /azure/azure-monitor/app/java-in-process-agent
+    - text: Wprowadzenie do ELK
+      itemType: tutorial
+      url: ./fundamentals/java-get-started-with-logzio.md
+    - text: Monitoruj aplikacje sprężynowe
+      itemType: how-to-guide
+      url: /azure/spring-cloud/diagnostic-services
+    footerLink:
+      text: Zobacz dokumentację Azure Monitor
+      url: /azure/azure-monitor
+  - title: Zabezpieczanie aplikacji Java
+    links:
+    - text: Włącz uwierzytelnianie użytkowników końcowych
+      itemType: quickstart
+      url: /azure/active-directory/develop/quickstart-v2-java-webapp
+    - text: Biblioteka uwierzytelniania firmy Microsoft
+      itemType: how-to-guide
+      url: /azure/active-directory/develop/migrate-adal-msal-java
+    - text: Zarządzanie wpisami tajnymi aplikacji
+      itemType: quickstart
+      url: /azure/key-vault/quick-create-java
+    footerLink:
+      text: Zobacz dokumentację Active Directory
+      url: /azure/active-directory
+tools:
+  title: Narzędzia
+  items:
+  - title: Azure Toolkit for IntelliJ
+    imageSrc: https://docs.microsoft.com/media/logos/logo_intellij.svg
+    url: toolkit-for-intellij/index.yml
+  - title: Visual Studio Code
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+    url: https://code.visualstudio.com/docs
+  - title: Azure Toolkit for Eclipse
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: toolkit-for-eclipse/index.yml
+  - title: Zaćmienie-profilowanie
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: eclipse-microprofile/index.yml
+  - title: Maven
+    imageSrc: https://docs.microsoft.com/media/logos/logo_maven.svg
+    url: https://github.com/Microsoft/azure-maven-plugins#readme
+  - title: Gradle
+    imageSrc: https://docs.microsoft.com/media/logos/logo-gradle-elephant-icon-gradient-primary.svg
+    url: https://github.com/Microsoft/azure-gradle-plugins#readme
+  - title: Interfejs wiersza polecenia platformy Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_CLIgeneric.svg
+    url: /cli/azure
+  - title: Usługa Jenkins na platformie Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_jenkins.svg
+    url: /azure/jenkins
+additionalContent:
+  sections:
+  - title: ''
+  footer: Java i OpenJDK są znakami towarowymi lub zastrzeżonymi znakami towarowymi firmy Oracle i/lub jej filiami.

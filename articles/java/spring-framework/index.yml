@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: Dokumentacja dotycząca integracji z platformą Azure
+summary: Sprężyna to struktura aplikacji typu "open source" opracowana przez program VMware, która zapewnia uproszczone, modularne podejście do tworzenia aplikacji Java. Zawartość w tej witrynie sieci Web pokazuje, jak tworzyć i wdrażać aplikacje sprężynowe w chmurze.
+metadata:
+  title: Dokumentacja dotycząca integracji z platformą Azure
+  description: Sprężyna to struktura aplikacji typu "open source" opracowana przez program VMware, która zapewnia uproszczone, modularne podejście do tworzenia aplikacji Java.
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 3aaece404996f82110bc252581771a6311a6c6f1
+  ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/12/2020
+  ms.locfileid: "98669434"
+landingContent:
+- title: Przewodniki Wprowadzenie
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Programy Spring Boot Starter dla platformy Azure
+      url: spring-boot-starters-for-azure.md
+    - text: Azure Cosmos DB danych wiosennych
+      url: how-to-guides-spring-data-cosmosdb.md
+  - linkListType: get-started
+    links:
+    - text: Azure Storage
+      url: configure-spring-boot-starter-java-app-with-azure-storage.md
+    - text: Key Vault
+      url: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+    - text: Platforma Kafka i usługa Event Hubs
+      url: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
+- title: Samouczki krok po kroku
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Zabezpieczanie aplikacji za pomocą Azure Active Directory
+      url: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+    - text: Skonfiguruj aplikację do używania Redis Cache
+      url: configure-spring-boot-initializer-java-app-with-redis-cache.md
+    - text: Korzystanie z Azure Cosmos DB interfejsu API SQL
+      url: configure-spring-boot-starter-java-app-with-cosmos-db.md
+    - text: Wdrażanie aplikacji z rozruchem wiosny
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
+    - text: Wdrażanie aplikacji w klastrze w AKS
+      url: deploy-spring-boot-java-app-on-kubernetes.md
+    - text: Wdrażanie aplikacji do Web Apps dla kontenerów
+      url: deploy-spring-boot-java-app-on-linux.md
+- title: Przykłady kodu
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Przykłady dotyczące środowiska Spring Boot dla platformy Azure
+      url: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples
+    - text: Przewodniki dotyczące środowiska Spring Boot
+      url: https://github.com/spring-guides/
+- title: Zasoby sprężynowe
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Platforma Spring
+      url: https://spring.io/
+    - text: Chmura Wiosenna Azure
+      url: https://spring.io/projects/spring-cloud-azure
+    - text: Informacje o platformie Spring
+      url: https://spring.io/learn
+    - text: Spring Boot
+      url: https://spring.io/projects/spring-boot
+    - text: Spring Initializr
+      url: https://start.spring.io/

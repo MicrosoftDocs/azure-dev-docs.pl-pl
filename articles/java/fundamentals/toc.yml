@@ -1,0 +1,45 @@
+- name: Dokumentacja narzędzi deweloperskich platformy Azure w języku Java
+  href: index.yml
+  items:
+    - name: Omówienie
+      href: java-azure-tools.md
+    - name: Obsługa technologii Java
+      expanded: true
+      items:
+        - name: Obsługa długoterminowa technologii Java
+          href: java-jdk-long-term-support.md
+        - name: Instalowanie zestawu Java JDK
+          href: java-jdk-install.md
+        - name: Obrazy platformy Docker ze środowiskiem Java dla platformy Azure
+          href: java-jdk-docker-images.md
+        - name: Rejestrator i kontrola służbowa Zulu Flight
+          href: java-jdk-flight-recorder-and-mission-control.md
+        - name: Powody do migracji do środowiska Java 11
+          href: reasons-to-move-to-java-11.md
+        - name: Przejście ze środowiska Java 8 do środowiska Java 11
+          href: transition-from-java-8-to-java-11.md
+    - name: Visual Studio Code
+      href: 'https://code.visualstudio.com/docs/languages/java'
+    - name: IntelliJ IDEA
+      href: ../toolkit-for-intellij/index.yml
+    - name: Eclipse
+      href: ../toolkit-for-eclipse/index.yml
+    - name: Wtyczki usługi Maven
+      expanded: true
+      href: 'https://github.com/Microsoft/azure-maven-plugins'
+      items:
+        - name: Azure App Service
+          href: 'https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md'
+        - name: Azure Functions
+          href: 'https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions'
+        - name: Azure Spring Cloud
+          href: 'https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Spring-Cloud'
+    - name: Ciągła integracja/ciągłe wdrażanie za pomocą usługi Jenkins
+      href: /azure/jenkins/
+    - name: Azure DevOps
+      href: /azure/devops/java/
+    - name: Samouczki
+      expanded: true
+      items:
+        - name: Monitorowanie i rejestrowanie przy użyciu usługi Logz.io
+          href: java-get-started-with-logzio.md

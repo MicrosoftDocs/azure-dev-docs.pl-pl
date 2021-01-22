@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Dokumentacja Azure Toolkit for IntelliJ
+summary: Zestaw narzędzi platformy Azure dla środowiska IntelliJ udostępnia szablony oraz funkcje, dzięki którym można łatwo tworzyć, opracowywać, testować i wdrażać aplikacje platformy Azure przy użyciu zintegrowanego środowiska projektowego Eclipse.
+metadata:
+  title: Dokumentacja Azure Toolkit for IntelliJ
+  description: Użyj Azure Toolkit for IntelliJ, aby łatwo tworzyć, opracowywać, testować i wdrażać aplikacje platformy Azure przy użyciu środowiska IDE IntelliJ.
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 31e00fb7f27aa8ceac4aa29dbe58ae80bf5f0584
+  ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 09/21/2020
+  ms.locfileid: "98669407"
+landingContent:
+- title: Przewodniki Wprowadzenie
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Tworzenie aplikacji internetowej Hello world dla usługi Azure App Service
+      url: create-hello-world-web-app.md
+    - text: Utwórz funkcję wyzwalacza HTTP dla Azure Functions
+      url: quickstart-functions.md
+- title: Samouczki krok po kroku
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Uruchamianie Hello world aplikacji sieci Web w kontenerze systemu Linux
+      url: hello-world-web-app-linux.md
+    - text: Tworzenie aplikacji platformy Spark dla klastra usługi HDInsight Spark Linux
+      url: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin
+- title: Zarządzanie zasobami platformy Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Pamięci podręczne Redis Cache
+      url: managing-redis-caches-using-azure-explorer.md
+    - text: Konta magazynu
+      url: managing-virtual-machines-using-azure-explorer.md
+    - text: Maszyny wirtualne
+      url: managing-storage-accounts-using-azure-explorer.md
+- title: Obsługiwane zestawy JDK
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Java dla platformy Azure i Azure Stack
+      url: ../fundamentals/index.yml
+- title: Kod źródłowy
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Zestawy narzędzi platformy Azure dla języka Java
+      url: https://github.com/microsoft/azure-tools-for-java

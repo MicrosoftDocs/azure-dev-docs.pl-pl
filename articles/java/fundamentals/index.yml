@@ -1,0 +1,67 @@
+### YamlMime:Landing
+title: Dokumentacja narzędzi deweloperskich platformy Azure w języku Java
+summary: Narzędzia, środowisk IDE i obsługiwane zestawy JDK do programowania w języku Java na platformie Azure.
+metadata:
+  title: Dokumentacja dotycząca języka Java na platformie Azure
+  description: Narzędzia, środowisk IDE i obsługiwane zestawy JDK do programowania w języku Java na platformie Azure
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 5c9b16a6431733875145d071484ae65aee5999fb
+  ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 12/23/2020
+  ms.locfileid: "98669446"
+landingContent:
+- title: Narzędzia dla deweloperów chmury Java
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Omówienie narzędzi
+      url: java-azure-tools.md
+- title: Obsługiwane zestawy JDK
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Obsługa długoterminowa technologii Java
+      url: java-jdk-long-term-support.md
+    - text: Instalowanie zestawu Java JDK
+      url: java-jdk-install.md
+    - text: Obrazy platformy Docker ze środowiskiem Java dla platformy Azure
+      url: java-jdk-docker-images.md
+- title: Środowiska IDE
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio Code
+      url: https://code.visualstudio.com/docs/languages/java
+    - text: IntelliJ IDEA
+      url: ../toolkit-for-intellij/index.yml
+    - text: Eclipse
+      url: ../toolkit-for-eclipse/index.yml
+- title: Wtyczki usługi Maven
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure App Service
+      url: https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md
+    - text: Azure Functions
+      url: https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions
+    - text: Azure Spring Cloud
+      url: https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Spring-Cloud
+- title: Rejestrowanie
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Konfigurowanie rejestrowania za pomocą zestawu Azure SDK dla języka Java
+      url: ../sdk/java-sdk-azure-log.md
+    - text: Monitorowanie i rejestrowanie przy użyciu usługi Logz.io
+      url: java-get-started-with-logzio.md
+- title: DevOps
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure DevOps
+      url: /azure/devops/java/
+    - text: Ciągła integracja/ciągłe wdrażanie za pomocą usługi Jenkins
+      url: /azure/jenkins/

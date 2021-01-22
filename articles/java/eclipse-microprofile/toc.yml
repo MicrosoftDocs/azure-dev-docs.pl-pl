@@ -1,0 +1,57 @@
+- name: Zaćmienie mikroprofilowe w dokumentacji platformy Azure
+  href: index.yml
+  items:
+    - name: Rozszerzenia platformy Azure
+      href: 'https://github.com/Azure/azure-microprofile'
+    - name: Samouczki
+      expanded: true
+      items:
+        - name: Wdrażanie do Azure App Service za pomocą Maven
+          expanded: false
+          items:
+            - name: Wdróż Quarkus
+              href: deploy-microprofile-quarkus-java-app-with-maven-plugin.md
+            - name: Wdróż Helidon
+              href: deploy-microprofile-helidon-java-app-with-maven-plugin.md
+            - name: Wdróż Payara Micro
+              href: deploy-microprofile-payara-micro-java-app-with-maven-plugin.md
+            - name: Wdróż KumuluzEE
+              href: deploy-microprofile-kumuluzee-java-app-with-maven-plugin.md
+        - name: Źródło konfiguracji dla usługi Azure Key Vault
+          href: configure-microprofile-with-keyvault.md
+        - name: Ciągła integracja/ciągłe wdrażanie aplikacji MicroProfile przy użyciu usługi Azure Pipelines
+          href: cicd-microprofile.md
+    - name: Samples
+      expanded: false
+      items:
+        - name: Aplikacja MicroProfile Hello Azure
+          href: 'https://github.com/azure-samples/microprofile-hello-azure'
+        - name: Źródło konfiguracji MicroProfile dla usługi Azure Key Vault
+          href: 'https://github.com/Azure-Samples/microprofile-configsource-keyvault'
+    - name: Odwołanie
+      expanded: true
+      items:
+        - name: Eclipse MicroProfile
+          href: 'https://microprofile.io/'
+        - name: Implementacje specyfikacji MicroProfile
+          expanded: false
+          items:
+            - name: Apache TomEE
+              href: 'https://tomee.apache.org'
+            - name: IBM OpenLiberty
+              href: 'https://openliberty.io/'
+            - name: KumuluzEE Micro
+              href: 'https://ee.kumuluz.com/microprofile'
+            - name: Payara Micro
+              href: 'https://payara.fish/payara_micro'
+            - name: Red Hat WildFly Swarm (Thorntail)
+              href: 'https://thorntail.io/'
+        - name: Generatory projektów MicroProfile
+          expanded: false
+          items:
+            - name: Generator WildFly Swarm (Thorntail)
+              href: 'https://thorntail.io/generator/'
+            - name: Generator KumuluzEE
+              href: 'https://ee.kumuluz.com/generator/'
+            - name: Jeddict
+              href: 'https://jeddict.github.io/'

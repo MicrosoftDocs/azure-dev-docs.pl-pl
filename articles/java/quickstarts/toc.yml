@@ -1,0 +1,25 @@
+- name: Przewodnik Szybki Start platformy Azure dla języka Java
+  href: ./index.yml
+  items:
+    - name: Usługi obliczeniowe
+      href: compute.md
+    - name: Dane
+      href: data.md
+    - name: Magazyn
+      href: storage.md
+    - name: Buforowanie
+      href: caching.md
+    - name: 'klucze tajne i zarządzanie konfiguracją,'
+      href: secrets-and-configuration-management.md
+    - name: Katalogi
+      href: directories.md
+    - name: Obsługa komunikatów i zdarzeń
+      href: messaging-and-eventing.md
+    - name: Sieć
+      href: networking.md
+    - name: Monitorowanie
+      href: monitoring.md
+    - name: Usługi poznawcze
+      href: cognitive-services.md
+    - name: DevOps
+      href: devops.md

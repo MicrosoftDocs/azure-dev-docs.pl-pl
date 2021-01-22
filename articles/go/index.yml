@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Dokumentacja zestawu Azure SDK dla języka Go
+summary: >
+  Dowiedz się więcej o korzystaniu z zestawu Azure SDK dla języka Go oraz zawartych w nim funkcji i narzędzi programistycznych ułatwiających używanie platformy Azure z językiem Go.
+metadata:
+  title: Platforma Azure dla deweloperów języka Go
+  description: Rozpocznij tworzenie aplikacji przy użyciu zestawu Azure SDK dla języka Go, korzystając z poniższych zasobów dla deweloperów.
+  author: sptramer
+  ms.author: sttramer
+  ms.date: 09/09/2019
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.devlang: golang
+  ms.openlocfilehash: b5e01d5f172a842d6b85355c568c170949236be8
+  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 05/05/2020
+  ms.locfileid: "98669265"
+landingContent:
+- title: Wprowadzenie do zestawu Azure SDK dla języka Go
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Instalowanie zestawu Azure SDK dla języka Go
+      url: azure-sdk-install.md
+    - text: Narzędzia dla deweloperów
+      url: azure-sdk-tools.md
+  - linkListType: how-to-guide
+    links:
+    - text: Uwierzytelnianie aplikacji
+      url: azure-sdk-authorization.md
+- title: Przykłady dla zestawu Azure SDK dla języka Go
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Wdrażanie maszyny wirtualnej na podstawie szablonu
+      url: azure-sdk-qs-vm.md
+    - text: Używanie usługi Blob Storage z językiem Go
+      url: /azure/storage/blobs/storage-quickstart-blobs-go?toc=/azure/develoer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+    - text: Nawiązywanie połączenia z usługą Azure Database for PostgreSQL
+      url: /azure/postgresql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/develpoer/breadcrumb/toc.json
+    - text: Nawiązywanie połączenia z usługą Azure Database for MySQL
+      url: /azure/mysql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+    - text: Wykonywanie zapytań w bazie danych Azure SQL Database
+      url: /azure/sql-database/sql-database-connect-query-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+- title: Dokumentacja zestawu Azure SDK dla języka Go
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Przykłady kodu dla zestawu Azure SDK dla języka Go
+      url: https://github.com/azure-samples/azure-sdk-for-go-samples
+    - text: Dokumentacja interfejsu API zestawu Azure SDK dla języka Go
+      url: https://godoc.org/github.com/Azure/azure-sdk-for-go

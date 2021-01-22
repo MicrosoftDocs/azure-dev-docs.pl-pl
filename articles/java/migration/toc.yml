@@ -1,0 +1,36 @@
+- name: Dokumentacja dotycząca migracji w języku Java do platformy Azure
+  href: index.yml
+  items:
+    - name: Omówienie
+      href: migration-overview.md
+    - name: Przechodzenie z platformy Spring Boot do usługi Azure App Service
+      href: migrate-spring-boot-to-app-service.md
+    - name: Przechodzenie z platformy Spring Boot do usługi AKS
+      href: migrate-spring-boot-to-azure-kubernetes-service.md
+    - name: Przechodzenie z platformy Spring Boot do usługi Azure Spring Cloud
+      href: migrate-spring-boot-to-azure-spring-cloud.md
+    - name: Przechodzenie z platformy Spring Cloud do usługi Azure Spring Cloud
+      href: migrate-spring-cloud-to-azure-spring-cloud.md
+    - name: Przechodzenie z oprogramowania Tomcat do usługi Azure App Service
+      href: migrate-tomcat-to-tomcat-app-service.md
+    - name: Przechodzenie z oprogramowania Tomcat do kontenerów w usłudze AKS
+      href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+    - name: Przechodzenie z oprogramowania Tomcat do usługi Azure Spring Cloud
+      href: migrate-tomcat-to-azure-spring-cloud.md
+    - name: Przechodzenie z oprogramowania WebLogic na platformę Azure
+      expanded: true
+      items:
+        - name: Przechodzenie z oprogramowania WebLogic do usługi Azure Virtual Machines
+          href: migrate-weblogic-to-virtual-machines.md
+        - name: Korzystanie z oprogramowania WebLogic z usługą AAD za pośrednictwem protokołu LDAP
+          href: migrate-weblogic-with-aad-ldap.md
+        - name: Korzystanie z oprogramowania WebLogic z usługą App Gateway
+          href: migrate-weblogic-with-app-gateway.md
+    - name: Przechodzenie z oprogramowania WildFly do serwera WildFly w usłudze AKS
+      href: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+    - name: Przechodzenie z oprogramowania WebLogic do serwera WildFly w usłudze AKS
+      href: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+    - name: Przechodzenie z oprogramowania WebSphere do serwera WildFly w usłudze AKS
+      href: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+    - name: Przechodzenie z oprogramowania JBoss EAP do serwera WildFly w usłudze AKS
+      href: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md

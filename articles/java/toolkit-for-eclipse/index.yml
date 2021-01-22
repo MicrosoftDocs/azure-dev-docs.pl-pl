@@ -1,0 +1,49 @@
+### YamlMime:Landing
+title: Dokumentacja Azure Toolkit for Eclipse
+summary: Zestaw narzędzi Azure Toolkit for Eclipse udostępnia szablony oraz funkcje, dzięki którym można łatwo tworzyć, opracowywać, testować i wdrażać aplikacje w chmurze na platformie Azure z poziomu środowiska Eclipse IDE.
+metadata:
+  title: Dokumentacja Azure Toolkit for Eclipse
+  description: Dowiedz się, jak wtyczka Azure Toolkit for Eclipse ułatwia tworzenie i wdrażanie aplikacji w chmurze na platformie Azure.
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 55ffc89edfd66944e242431e33999b89b0c71f52
+  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 05/05/2020
+  ms.locfileid: "98669367"
+landingContent:
+- title: Przewodniki Wprowadzenie
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Tworzenie aplikacji internetowej Hello world dla usługi Azure App Service
+      url: create-hello-world-web-app.md
+- title: Samouczki krok po kroku
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Tworzenie aplikacji platformy Spark dla klastra usługi HDInsight Spark Linux
+      url: /azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin
+- title: Zarządzanie zasobami platformy Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Pamięci podręczne Redis Cache
+      url: managing-redis-caches-using-azure-explorer.md
+    - text: Konta magazynu
+      url: managing-storage-accounts-using-azure-explorer.md
+    - text: Maszyny wirtualne
+      url: managing-virtual-machines-using-azure-explorer.md
+- title: Obsługiwane zestawy JDK
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Java dla platformy Azure i Azure Stack
+      url: /java/azure/jdk/
+- title: Kod źródłowy
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Zestawy narzędzi platformy Azure dla języka Java
+      url: https://github.com/microsoft/azure-tools-for-java

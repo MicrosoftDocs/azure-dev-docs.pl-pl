@@ -1,0 +1,37 @@
+### YamlMime:Landing
+title: Dokumentacja zestawu Azure SDK dla języka Java
+summary: Programowanie w chmurze przy użyciu języka Java na platformie Azure.
+metadata:
+  title: Dokumentacja zestawu Azure SDK dla języka Java
+  description: Programowanie w chmurze przy użyciu języka Java na platformie Azure
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 2380696b801927bc842278b1b8604825feda0984
+  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 05/05/2020
+  ms.locfileid: "98669273"
+landingContent:
+- title: Platforma Azure dla deweloperów języka Java w chmurze
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Programowanie na platformie Azure przy użyciu języka Java
+      url: java-sdk-azure-get-started.md
+  - linkListType: reference
+    links:
+    - text: Przeglądarka interfejsu API języka Java
+      url: /java/api/?view=azure-java
+  - linkListType: how-to-guide
+    links:
+    - text: Dodawanie certyfikatu głównego
+      url: java-sdk-add-certificate-ca-store.md
+    - text: Uwierzytelnianie
+      url: java-sdk-azure-authenticate.md
+    - text: Konfigurowanie rejestrowania
+      url: java-sdk-azure-log.md
+  - linkListType: learn
+    links:
+    - text: Wzorce i najlepsze rozwiązania
+      url: java-sdk-azure-concepts.md

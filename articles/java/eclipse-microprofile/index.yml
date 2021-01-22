@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Zaćmienie mikroprofilowe w dokumentacji platformy Azure
+summary: MicroProfile to projekt organizacji Eclipse Foundation, którego celem jest wykorzystywanie i rozwijanie technologii Java dla przedsiębiorstw, takich jak Java EE, w kierunku rozproszonych architektur mikrousług przez wprowadzanie innowacji w różnych implementacjach i współpracę nad wspólnymi obszarami zainteresowań w celu standaryzacji.
+metadata:
+  title: Zaćmienie mikroprofilowe w dokumentacji platformy Azure
+  description: Rozpocznij pracę przy użyciu specyfikacji Eclipse MicroProfile, aby tworzyć aplikacje na platformie Azure.
+  author: yoshioterada
+  ms.author: yoterada
+  ms.date: 06/29/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 2c478ff485c5a003aef47f2ffeb26bc75d3fdfb2
+  ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 09/28/2020
+  ms.locfileid: "98669416"
+landingContent:
+- title: Przewodniki Wprowadzenie
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Wdrażanie w usłudze Azure Container Instances
+      url: deploy-microprofile-to-container-instances.md
+    - text: Źródło konfiguracji dla usługi Azure Key Vault
+      url: configure-microprofile-with-keyvault.md
+    - text: Ciągła integracja/ciągłe wdrażanie aplikacji MicroProfile przy użyciu usługi Azure DevOps
+      url: cicd-microprofile.md
+- title: Wdrażanie do Azure App Service za pomocą Maven
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Wdróż Quarkus
+      url: deploy-microprofile-quarkus-java-app-with-maven-plugin.md
+    - text: Wdróż Helidon
+      url: deploy-microprofile-helidon-java-app-with-maven-plugin.md
+    - text: Wdróż Payara Micro
+      url: deploy-microprofile-payara-micro-java-app-with-maven-plugin.md
+    - text: Wdróż KumuluzEE
+      url: deploy-microprofile-kumuluzee-java-app-with-maven-plugin.md
+- title: Przykłady kodu
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Przykłady mikroprofilów dla platformy Azure
+      url: https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue
+    - text: Przykłady mikroprofilów
+      url: https://microprofile.io/project/eclipse/microprofile-samples
+- title: Zasoby mikroprofilowe
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: MicroProfile.io
+      url: https://microprofile.io/
