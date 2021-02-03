@@ -1,35 +1,79 @@
 - name: Dokumentacja zestawu Azure SDK dla języka Java
   href: index.yml
   items:
-    - name: Rozpocznij
-      href: java-sdk-azure-get-started.md
+    - name: Rozpoczęcie pracy
+      href: get-started.md
     - name: Pojęcia
       expanded: true
       items:
-        - name: Wzorce i najlepsze rozwiązania
-          href: java-sdk-azure-concepts.md
-    - name: Artykuły z poradami
-      expanded: true
+        - name: Omówienie
+          href: overview.md
+        - name: Typowe koncepcje
+          expanded: false
+          items:
+            - name: Klienci i potok HTTP
+              href: http-client-pipeline.md
+            - name: Programowanie asynchroniczne
+              href: async-programming.md
+            - name: Stronicowanie i iteracja
+              href: pagination.md
+            - name: Długotrwałe operacje
+              href: lro.md
+            - name: Pośredniczenie
+              href: proxying.md
+            - name: Śledzenie
+              href: tracing.md
+        - name: Tożsamość i uwierzytelnianie
+          expanded: false
+          items:
+            - name: Omówienie
+              href: identity.md
+            - name: Uwierzytelnianie w środowiskach programistycznych
+              href: identity-dev-env-auth.md
+            - name: Uwierzytelnianie w aplikacjach hostowanych przez platformę Azure
+              href: identity-azure-hosted-auth.md
+            - name: Uwierzytelnianie za pomocą jednostek usługi
+              href: identity-service-principal-auth.md
+            - name: Uwierzytelnianie przy użyciu poświadczeń użytkownika
+              href: identity-user-auth.md
+        - name: Rejestrowanie
+          expanded: false
+          items:
+            - name: Omówienie
+              href: logging-overview.md
+            - name: Java. util. Logging
+              href: logging-jul.md
+            - name: Logback
+              href: logging-logback.md
+            - name: Log4J
+              href: logging-log4j.md
+    - name: Integracje
+      expanded: false
       items:
-        - name: Dodawanie certyfikatu głównego
-          href: java-sdk-add-certificate-ca-store.md
-        - name: Uwierzytelnianie
-          href: java-sdk-azure-authenticate.md
-        - name: Konfigurowanie rejestrowania
-          href: java-sdk-azure-log.md
+        - name: Spring
+          href: /azure/developer/java/spring-framework/spring-boot-starters-for-azure
+        - name: MicroProfile
+          href: 'https://docs.microsoft.com/azure/developer/java/eclipse-microprofile/'
+    - name: Rozwiązywanie problemów
+      expanded: false
+      items:
+        - name: Problemy z siecią
+          href: troubleshooting-network.md
     - name: Przykłady kodu
       items:
         - name: Maszyny wirtualne
-          href: java-sdk-azure-virtual-machine-samples.md
+          href: virtual-machine-samples.md
         - name: Aplikacje internetowe
-          href: java-sdk-azure-web-apps-samples.md
+          href: web-apps-samples.md
         - name: SQL Database
-          href: java-sdk-azure-sql-database-samples.md
+          href: sql-database-samples.md
         - name: Zabezpieczenia
-          href: java-sdk-azure-security-samples.md
+          href: security-samples.md
         - name: Kontenery
-          href: java-sdk-azure-containers-samples.md
+          href: containers-samples.md
         - name: Wszystkie przykłady w języku Java
           href: /samples/browse/?products=azure&languages=java
+    - name: Indeks pakietu
+      href: azure-sdk-library-package-index.md
     - name: Tematy pomocy
-      href: /java/api/?view=azure-java
+      href: /java/api

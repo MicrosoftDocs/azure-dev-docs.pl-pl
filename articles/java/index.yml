@@ -7,12 +7,12 @@ metadata:
   description: Zacznij opracowywać aplikacje dla chmury, korzystając z tych samouczków i narzędzi dla deweloperów języka Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: 94ea0c2dd3b11651cc30bce84bc3b26f7f12cc7a
-  ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+  ms.openlocfilehash: badee30def237b49cb9e46730335e730090fb66b
+  ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/16/2020
-  ms.locfileid: "98669428"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99511093"
 conceptualContent:
   items:
   - title: Przewodnik Szybki Start platformy Azure dla języka Java
@@ -61,10 +61,10 @@ conceptualContent:
     links:
     - text: Programowanie na platformie Azure przy użyciu języka Java
       itemType: get-started
-      url: sdk/java-sdk-azure-get-started.md
-    - text: Wzorce i najlepsze rozwiązania
+      url: sdk/get-started.md
+    - text: Wprowadzenie do zestawu Azure SDK dla języka Java
       itemType: learn
-      url: sdk/java-sdk-azure-concepts.md
+      url: sdk/overview.md
     - text: Przeglądarka interfejsu API języka Java
       itemType: reference
       url: /java/api/?view=azure-java

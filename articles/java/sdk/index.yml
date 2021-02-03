@@ -4,34 +4,46 @@ summary: Programowanie w chmurze przy użyciu języka Java na platformie Azure.
 metadata:
   title: Dokumentacja zestawu Azure SDK dla języka Java
   description: Programowanie w chmurze przy użyciu języka Java na platformie Azure
-  ms.date: 04/03/2020
+  ms.date: 02/02/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 2380696b801927bc842278b1b8604825feda0984
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: cde5054104f4331e48078b5854d61dca2c36f6cf
+  ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "98669273"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99511076"
 landingContent:
-- title: Platforma Azure dla deweloperów języka Java w chmurze
+- title: Platforma Azure dla deweloperów języka Java
   linkLists:
   - linkListType: get-started
     links:
     - text: Programowanie na platformie Azure przy użyciu języka Java
-      url: java-sdk-azure-get-started.md
+      url: get-started.md
+    - text: Korzystanie z zestawu Azure SDK dla języka Java
+      url: overview.md
   - linkListType: reference
     links:
     - text: Przeglądarka interfejsu API języka Java
-      url: /java/api/?view=azure-java
+      url: /java/api
   - linkListType: how-to-guide
     links:
-    - text: Dodawanie certyfikatu głównego
-      url: java-sdk-add-certificate-ca-store.md
-    - text: Uwierzytelnianie
-      url: java-sdk-azure-authenticate.md
+    - text: Tożsamość i uwierzytelnianie
+      url: identity.md
     - text: Konfigurowanie rejestrowania
-      url: java-sdk-azure-log.md
+      url: logging-overview.md
+- title: Typowe koncepcje
+  linkLists:
   - linkListType: learn
     links:
-    - text: Wzorce i najlepsze rozwiązania
-      url: java-sdk-azure-concepts.md
+    - text: Klienci i potok HTTP
+      url: http-client-pipeline.md
+    - text: Programowanie asynchroniczne
+      url: async-programming.md
+    - text: Stronicowanie i iteracja
+      url: pagination.md
+    - text: Długotrwałe operacje
+      url: lro.md
+    - text: Pośredniczenie
+      url: proxying.md
+    - text: Śledzenie
+      url: tracing.md
